@@ -7,46 +7,46 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#f0f4f8;
-  --bg2:#e8edf5;
-  --bg3:#dde4f0;
-  --card:#ffffff;
-  --card2:#f5f8ff;
-  --border:rgba(59,130,246,0.12);
-  --bh:rgba(59,130,246,0.28);
-  --blue:#2563eb;
-  --blue-mid:#3b82f6;
-  --blue-light:#93c5fd;
-  --blue-pale:#dbeafe;
-  --blue-dim:rgba(37,99,235,0.08);
-  --blue-glow:rgba(37,99,235,0.2);
-  --slate:#334155;
-  --slate2:#475569;
-  --slate3:#64748b;
-  --slate4:#94a3b8;
-  --slate5:#cbd5e1;
-  --white:#ffffff;
-  --dark:#0f172a;
-  --green:#16a34a;
-  --amber:#d97706;
-  --rose:#e11d48;
-  --violet:#7c3aed;
-  --mono:'JetBrains Mono',monospace;
+  --bg:#f0f4f8;
+  --bg2:#e8edf5;
+  --bg3:#dde4f0;
+  --card:#ffffff;
+  --card2:#f5f8ff;
+  --border:rgba(59,130,246,0.12);
+  --bh:rgba(59,130,246,0.28);
+  --blue:#2563eb;
+  --blue-mid:#3b82f6;
+  --blue-light:#93c5fd;
+  --blue-pale:#dbeafe;
+  --blue-dim:rgba(37,99,235,0.08);
+  --blue-glow:rgba(37,99,235,0.2);
+  --slate:#334155;
+  --slate2:#475569;
+  --slate3:#64748b;
+  --slate4:#94a3b8;
+  --slate5:#cbd5e1;
+  --white:#ffffff;
+  --dark:#0f172a;
+  --green:#16a34a;
+  --amber:#d97706;
+  --rose:#e11d48;
+  --violet:#7c3aed;
+  --mono:'JetBrains Mono',monospace;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--slate);overflow-x:hidden;cursor:none;font-size:16px;line-height:1.7}
 
 /* ══════════════════════════════════
-   BACKGROUND — 3 animated layers
+   BACKGROUND — 3 animated layers
 ══════════════════════════════════ */
 #aurora-canvas{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.55}
 
 .bg-hex{
-  position:fixed;inset:0;z-index:0;pointer-events:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpath d='M28 66L0 50V18L28 2l28 16v32L28 66zm0 0v34M0 50l28 16M56 50L28 66M28 2L0 18M28 2l28 16' stroke='rgba(37%2C99%2C235%2C0.07)' fill='none' stroke-width='1'/%3E%3C/svg%3E");
-  background-size:56px 100px;
-  animation:hexShift 40s linear infinite;
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpath d='M28 66L0 50V18L28 2l28 16v32L28 66zm0 0v34M0 50l28 16M56 50L28 66M28 2L0 18M28 2l28 16' stroke='rgba(37%2C99%2C235%2C0.07)' fill='none' stroke-width='1'/%3E%3C/svg%3E");
+  background-size:56px 100px;
+  animation:hexShift 40s linear infinite;
 }
 @keyframes hexShift{0%{background-position:0 0}100%{background-position:112px 200px}}
 
@@ -65,13 +65,13 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--slate);ove
 .particles{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
 .p-dot{position:absolute;border-radius:50%;animation:pdriftL linear infinite}
 @keyframes pdriftL{
-  0%{opacity:0;transform:translateY(0) scale(1)}
-  15%{opacity:.6}80%{opacity:.2}
-  100%{opacity:0;transform:translateY(-100vh) translateX(20px) scale(.6)}
+  0%{opacity:0;transform:translateY(0) scale(1)}
+  15%{opacity:.6}80%{opacity:.2}
+  100%{opacity:0;transform:translateY(-100vh) translateX(20px) scale(.6)}
 }
 
 /* ══════════════════════════════════
-   CURSOR MECHANICS
+   CURSOR MECHANICS
 ══════════════════════════════════ */
 #cd{position:fixed;width:8px;height:8px;background:var(--blue);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);box-shadow:0 0 10px rgba(37,99,235,.5)}
 #cr{position:fixed;width:32px;height:32px;border:1.5px solid rgba(37,99,235,0.4);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .2s,height .2s,border-color .2s}
@@ -79,14 +79,14 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--slate);ove
 @keyframes fpBloom{0%{transform:translate(-50%,-50%) scale(0) rotate(0deg);opacity:1}35%{transform:translate(-50%,-62%) scale(1.3) rotate(22deg);opacity:.9}70%{transform:translate(-50%,-70%) scale(.95) rotate(40deg);opacity:.5}100%{transform:translate(-50%,-82%) scale(.5) rotate(58deg);opacity:0}}
 
 /* ══════════════════════════════════
-   NAV
+   NAV
 ══════════════════════════════════ */
 nav{
-  position:fixed;top:0;left:0;right:0;z-index:200;
-  padding:15px 60px;display:flex;justify-content:space-between;align-items:center;
-  background:rgba(240,244,248,0.88);backdrop-filter:blur(22px);
-  border-bottom:1px solid rgba(37,99,235,0.1);
-  box-shadow:0 1px 20px rgba(15,23,42,0.06);
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  padding:15px 60px;display:flex;justify-content:space-between;align-items:center;
+  background:rgba(240,244,248,0.88);backdrop-filter:blur(22px);
+  border-bottom:1px solid rgba(37,99,235,0.1);
+  box-shadow:0 1px 20px rgba(15,23,42,0.06);
 }
 .nav-logo{font-family:'Outfit',sans-serif;font-weight:800;font-size:.92rem;color:var(--blue);text-decoration:none;letter-spacing:.04em}
 .nav-logo span{color:var(--slate4)}
@@ -100,16 +100,16 @@ nav{
 .nav-pill::after{display:none !important}
 
 /* ══════════════════════════════════
-   HERO
+   HERO
 ══════════════════════════════════ */
 #hero{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 24px 100px}
 .hero-tag{display:inline-flex;align-items:center;gap:10px;font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);border:1px solid rgba(37,99,235,0.2);padding:7px 22px;border-radius:100px;background:rgba(37,99,235,0.06);margin-bottom:36px;animation:fu .8s ease both}
 .live-dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 8px rgba(22,163,74,.6);animation:blink 2s ease-in-out infinite}
 @keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.65)}}
 .name-wrap{position:relative;margin-bottom:24px;display:inline-block}
-.hero-name{font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(3.5rem,10vw,9rem);line-height:.88;letter-spacing:-.04em;color:var(--dark);position:relative;z-index:3;animation:fu .8s .1s ease both,fl1 7s 1s ease-in-out infinite}
-.hero-g1{position:absolute;top:0;left:0;right:0;font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(3.5rem,10vw,9rem);line-height:.88;letter-spacing:-.04em;color:var(--blue);opacity:.15;z-index:2;pointer-events:none;animation:fl2 9s ease-in-out infinite}
-.hero-g2{position:absolute;top:0;left:0;right:0;font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(3.5rem,10vw,9rem);line-height:.88;letter-spacing:-.04em;color:var(--violet);opacity:.08;z-index:1;pointer-events:none;filter:blur(3px);animation:fl3 12s ease-in-out infinite}
+.hero-name{font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(3.8rem,11vw,9rem);line-height:.88;letter-spacing:-.04em;color:var(--dark);position:relative;z-index:3;animation:fu .8s .1s ease both,fl1 7s 1s ease-in-out infinite}
+.hero-g1{position:absolute;top:0;left:0;right:0;font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(3.8rem,11vw,9rem);line-height:.88;letter-spacing:-.04em;color:var(--blue);opacity:.15;z-index:2;pointer-events:none;animation:fl2 9s ease-in-out infinite}
+.hero-g2{position:absolute;top:0;left:0;right:0;font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(3.8rem,11vw,9rem);line-height:.88;letter-spacing:-.04em;color:var(--violet);opacity:.08;z-index:1;pointer-events:none;filter:blur(3px);animation:fl3 12s ease-in-out infinite}
 .hero-name::before{content:attr(data-text);position:absolute;top:0;left:3px;color:var(--blue-mid);clip-path:polygon(0 22%,100% 22%,100% 42%,0 42%);opacity:0;animation:glitch 8s infinite}
 @keyframes glitch{0%,92%,100%{opacity:0;transform:none}93%{opacity:.5;transform:translate(-4px,1px)}95%{opacity:.25;transform:translate(3px,-2px)}97%{opacity:0}}
 @keyframes fl1{0%,100%{transform:translateY(0)}40%{transform:translateY(-7px) rotate(.2deg)}70%{transform:translateY(4px) rotate(-.15deg)}}
@@ -117,7 +117,7 @@ nav{
 @keyframes fl3{0%,100%{transform:translate(0,0)}30%{transform:translate(-9px,7px)}65%{transform:translate(11px,-5px)}}
 .hero-formula{font-family:var(--mono);font-size:clamp(.76rem,1.8vw,.9rem);color:var(--blue);letter-spacing:.04em;margin-bottom:16px;opacity:.75;animation:fu .8s .2s ease both}
 .hero-formula span{color:var(--violet)}
-.hero-sub{font-size:clamp(.92rem,2vw,1.06rem);color:var(--slate2);font-weight:400;max-width:540px;line-height:1.88;margin-bottom:44px;animation:fu .8s .35s ease both; margin-left:auto; margin-right:auto;}
+.hero-sub{font-size:clamp(.92rem,2vw,1.06rem);color:var(--slate2);font-weight:400;max-width:540px;line-height:1.88;margin-bottom:44px;animation:fu .8s .35s ease both}
 .hero-sub strong{color:var(--dark)}
 .cta-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;animation:fu .8s .5s ease both}
 .btn1{font-size:.85rem;font-weight:700;letter-spacing:.04em;padding:13px 30px;border-radius:10px;background:var(--blue);color:#fff;border:none;text-decoration:none;transition:all .25s;box-shadow:0 4px 20px rgba(37,99,235,.3)}
@@ -130,7 +130,7 @@ nav{
 @keyframes fu{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
 
 /* ══════════════════════════════════
-   SECTIONS & TYPOGRAPHIC WEIGHTS
+   SECTIONS & TYPOGRAPHIC WEIGHTS
 ══════════════════════════════════ */
 .wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:88px 56px}
 .slabel{display:inline-flex;align-items:center;gap:10px;font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
@@ -139,8 +139,8 @@ nav{
 .mono{font-family:var(--mono);font-size:.88em;color:var(--blue)}
 
 .pdesc, .about-text p, .resume-summary, .exp-bullets li, .terminal-block p {
-  color: var(--slate2) !important;
-  font-weight: 500;
+  color: var(--slate2) !important;
+  font-weight: 500;
 }
 
 /* ABOUT */
@@ -187,8 +187,8 @@ nav{
 .omni-card:hover .ptag{background:rgba(217,119,6,.13)}
 
 /* ORBITAL STACK (PROFESSIONAL ENGINE LABELS) */
-.stack-section{text-align:center; overflow:hidden;}
-.orbital-wrap{position:relative;width:560px;height:560px;margin:0 auto; transition: transform 0.3s ease;}
+.stack-section{text-align:center}
+.orbital-wrap{position:relative;width:560px;height:560px;margin:0 auto}
 .orbital-core{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:86px;height:86px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2px;z-index:10;box-shadow:0 0 30px rgba(37,99,235,.35)}
 .orbital-core span:first-child{font-family:'Outfit',sans-serif;font-weight:800;font-size:1rem;color:#fff}
 .orbital-core span:last-child{font-size:.48rem;font-weight:700;color:rgba(255,255,255,.7);letter-spacing:.1em;text-transform:uppercase;font-family:var(--mono)}
@@ -215,7 +215,7 @@ nav{
 /* GITHUB BOX */
 .gh-box{display:flex;align-items:center;gap:28px;background:var(--card);border:1px solid rgba(37,99,235,0.12);border-radius:18px;padding:32px 36px;position:relative;overflow:hidden;transition:all .3s;box-shadow:0 2px 16px rgba(37,99,235,.07)}
 .gh-box:hover{border-color:rgba(37,99,235,0.28);box-shadow:0 8px 32px rgba(37,99,235,.13);transform:translateY(-3px)}
-.gh-box::before{content:'position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),transparent)}
+.gh-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),transparent)}
 .gh-icon-wrap{width:60px;height:60px;min-width:60px;border-radius:14px;background:var(--blue-pale);border:1px solid rgba(37,99,235,0.2);display:flex;align-items:center;justify-content:center;font-size:1.7rem}
 .gh-text h3{font-family:'Outfit',sans-serif;font-weight:700;font-size:1.1rem;color:var(--dark);margin-bottom:5px}
 .gh-text p{font-size:.87rem;color:var(--slate2);line-height:1.7;margin-bottom:16px}
@@ -253,6 +253,16 @@ nav{
 .skill-cat-title{font-family:var(--mono);font-size:.63rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
 .skill-tags{display:flex;flex-wrap:wrap;gap:6px}
 .skill-tag{font-size:.7rem;font-weight:600;padding:3px 10px;border-radius:6px;background:var(--blue-pale);color:var(--blue);border:1px solid rgba(37,99,235,0.15)}
+
+/* ACHIEVEMENTS */
+.agrid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.ai{display:flex;align-items:flex-start;gap:12px;background:var(--card);border:1px solid rgba(37,99,235,0.1);border-radius:13px;padding:16px 18px;transition:all .25s;box-shadow:0 1px 8px rgba(37,99,235,.05)}
+.ai:hover {border-color:rgba(37,99,235,0.28);transform:translateX(4px);box-shadow:0 4px 18px rgba(37,99,235,.1)}
+.adot{width:6px;min-width:6px;height:6px;background:var(--blue);border-radius:50%;margin-top:8px}
+.ai p{font-size:.855rem;color:var(--slate2);line-height:1.6}
+.ai strong{color:var(--dark)}
+.ach-link{color:var(--blue);text-decoration:none;border-bottom:1px dashed rgba(37,99,235,.35);transition:border-color .2s}
+.ach-link:hover{border-color:var(--blue)}
 
 /* CONTACT ZONE */
 .cbox{max-width:540px;margin:0 auto;background:var(--card);border:1px solid rgba(37,99,235,0.14);border-radius:22px;padding:52px 42px;position:relative;overflow:hidden;text-align:center;box-shadow:0 8px 40px rgba(37,99,235,.1)}
@@ -297,58 +307,25 @@ footer{text-align:center;padding:22px;font-size:.72rem;color:var(--slate4);lette
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 
-/* ══════════════════════════════════
-   ENHANCED RESPONSIVE MEDIA QUERIES
-══════════════════════════════════ */
-@media(max-width:1024px){
-  .wrap{padding:80px 40px}
-  .bento{grid-template-columns:repeat(2,1fr)}
-  .bc1{grid-column:1 / 3}
-  .bc2{grid-column:1 / 2}
-  .bc3{grid-column:2 / 3}
-  .orbital-wrap{transform:scale(0.85); transform-origin:center; margin-bottom:-40px;}
-}
-
 @media(max-width:768px){
-  nav{padding:12px 20px; flex-direction:column; gap:12px;}
-  .nav-links{gap:12px; flex-wrap:wrap; justify-content:center;}
-  .wrap{padding:60px 24px}
-  .about-grid,.skill-cats,.edu-grid{grid-template-columns:1fr;gap:24px}
-  .bento{grid-template-columns:1fr}
-  .bc1,.bc2,.bc3{grid-column:1 / -1;grid-row:auto}
-  .bc1{display:flex;flex-direction:column;padding:28px 22px;gap:20px}
-  .cbox{padding:36px 20px}
-  .clink{min-width:0;width:100%}
-  .gh-box{flex-direction:column;padding:26px 20px;gap:20px;text-align:center;}
-  .gh-link{margin:0 auto;}
-  .resume-header{flex-direction:column;gap:16px;text-align:center;align-items:center;}
-  .resume-contact{text-align:center;}
-  #omni-widget{width:calc(100vw - 32px);right:16px;bottom:90px;}
-  
-  /* Prevent large empty vertical spaces when scaling the orbital stack down */
-  .orbital-wrap{transform:scale(0.65); transform-origin:top center; margin-bottom:-190px;}
+  nav{padding:13px 18px}
+  .nav-links{gap:14px}
+  .wrap{padding:56px 18px}
+  .about-grid,.skill-cats,.edu-grid{grid-template-columns:1fr;gap:28px}
+  .bento{grid-template-columns:1fr}
+  .bc1,.bc2,.bc3{grid-column:1/-1;grid-row:auto}
+  .bc1{display:flex;flex-direction:column;padding:28px 22px;gap:24px}
+  .agrid{grid-template-columns:1fr}
+  .cbox{padding:36px 20px}
+  .clink{min-width:0;width:100%}
+  .gh-box{flex-direction:column;padding:26px 20px;gap:20px}
+  .resume-header{flex-direction:column;gap:16px}
+  .resume-contact{text-align:left}
+  #omni-widget{width:calc(100vw - 24px);right:12px;bottom:88px}
 }
-
 @media(max-width:480px){
-  .hero-name{font-size:3.2rem;}
-  .hero-sub{font-size:0.9rem; padding:0 10px;}
-  .cta-row{flex-direction:column; width:100%; padding:0 20px;}
-  .btn1, .btn2{width:100%; text-align:center;}
-  
-  /* Horizontal scroll for navigation instead of hiding links entirely */
-  .nav-links{
-    display:flex; 
-    overflow-x:auto; 
-    padding-bottom:5px; 
-    justify-content:flex-start; 
-    -webkit-overflow-scrolling:touch; 
-    width:100%; 
-    white-space:nowrap;
-  }
-  .nav-links::-webkit-scrollbar{display:none;}
-  
-  /* Smooth scaling for the smallest displays */
-  .orbital-wrap{transform:scale(0.48); transform-origin:top center; margin-bottom:-280px;}
+  .nav-links li:not(:last-child):not(:nth-last-child(2)){display:none}
+  .orbital-wrap{transform:scale(0.57);transform-origin:top center;margin-bottom:-165px}
 }
 </style>
 </head>
@@ -368,346 +345,346 @@ footer{text-align:center;padding:22px;font-size:.72rem;color:var(--slate4);lette
 <div id="cr"></div>
 
 <nav>
-  <a href="#hero" class="nav-logo">RI</a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Work</a></li>
-    <li><a href="#stack">Stack</a></li>
-    <li><a href="#resume">Resume</a></li>
-    <li><a href="https://github.com/rebiyamalik" target="_blank" rel="noopener" class="nav-pill">⌥GitHub ↗</a></li>
-    <li><a href="https://www.linkedin.com/in/rebiya-ismail-b3b5252ba/" target="_blank" rel="noopener" class="nav-pill">LinkedIn ↗</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+  <a href="#hero" class="nav-logo">RI</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Work</a></li>
+    <li><a href="#stack">Stack</a></li>
+    <li><a href="#resume">Resume</a></li>
+    <li><a href="https://github.com/rebiyamalik" target="_blank" rel="noopener" class="nav-pill">⌥GitHub ↗</a></li>
+    <li><a href="https://www.linkedin.com/in/rebiya-ismail-b3b5252ba/" target="_blank" rel="noopener" class="nav-pill">LinkedIn ↗</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </nav>
 
 <section id="hero">
-  <div class="hero-tag"><div class="live-dot"></div>Full Stack Developer · AI Engineering · Computational Mathematics</div>
-  <div class="name-wrap">
-    <div class="hero-g2">REBIYA<br>ISMAIL</div>
-    <div class="hero-g1">REBIYA<br>ISMAIL</div>
-    <h1 class="hero-name" data-text="REBIYA ISMAIL">REBIYA<br>ISMAIL</h1>
-  </div>
-  <p class="hero-formula">Computational Mathematics → AI Architecture → Clean Web Systems</p>
-  <p class="hero-sub"><strong>Math-driven engineer dedicated to building scalable digital infrastructure.</strong> I transform complex logical frameworks into actionable AI tooling and automated systems, specializing in RAG architectures and reliable backend pipelines that translate first-principles analysis into functional, ship-ready software.</p>
-  <div class="cta-row">
-    <a href="#projects" class="btn1"><strong>View Work</strong></a>
-    <a href="#resume" class="btn2"><strong>View Resume</strong></a>
-  </div>
-  <div class="scroll-hint"><div class="sline"></div><span>Scroll</span></div>
+  <div class="hero-tag"><div class="live-dot"></div>Full Stack Developer · AI Engineering · Computational Mathematics</div>
+  <div class="name-wrap">
+    <div class="hero-g2">REBIYA<br>ISMAIL</div>
+    <div class="hero-g1">REBIYA<br>ISMAIL</div>
+    <h1 class="hero-name" data-text="REBIYA ISMAIL">REBIYA<br>ISMAIL</h1>
+  </div>
+  <p class="hero-formula">Computational Mathematics → AI Architecture → Clean Web Systems</p>
+  <p class="hero-sub"><strong>Math-driven engineer dedicated to building scalable digital infrastructure. I transform complex logical frameworks into actionable AI tooling and automated systems, specializing in RAG architectures and reliable backend pipelines that translate first-principles analysis into functional, ship-ready software.</p>
+  <div class="cta-row">
+    <a href="#projects" class="btn1"><strong>View Work</strong></a>
+    <a href="#resume" class="btn2"><strong>View Resume</strong></a>
+  </div>
+  <div class="scroll-hint"><div class="sline"></div><span>Scroll</span></div>
 </section>
 
 <div class="wrap reveal" id="about">
-  <div class="about-grid">
-    <div class="about-text">
-      <div class="slabel">About Me</div>
-      <h2 class="shead">Math-driven.<br>Systems-minded.</h2>
-      <p>I'm a <strong>BS Mathematics student at Bahauddin Zakariya University</strong> (CASPAM Department), where coursework in <span class="mono">Linear Algebra</span>, <span class="mono">Real Analysis</span>, and <span class="mono">Differential Equations</span> trained me to decompose complexity before writing a single line of code.</p>
-      <p>That foundation directly shapes how I build — from parsing structured data inputs with precision, to engineering <strong>context-aware AI applications</strong> that handle ambiguous, real-world queries cleanly.</p>
-      <p>3 years of freelance work delivering <strong>full-stack platforms, API integrations, and n8n automation pipelines</strong> means the theory ships as working software. I get it done.</p>
-    </div>
-    <div>
-      <div class="acard">
-        <div class="sgrid">
-          <div class="sbox"><span class="snum">3.69</span><span class="slbl">CGPA / BZU</span></div>
-          <div class="sbox"><span class="snum">3+</span><span class="slbl">Yrs Building</span></div>
-          <div class="sbox"><span class="snum">16+</span><span class="slbl">Tech Skills</span></div>
-          <div class="sbox"><span class="snum">4</span><span class="slbl">Languages</span></div>
-        </div>
-        <p style="font-size:.62rem;color:var(--slate3);letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin-bottom:8px;font-family:var(--mono)">Spoken Languages</p>
-        <div class="chips">
-          <span class="chip">English</span><span class="chip">Urdu</span>
-          <span class="chip">Saraiki</span><span class="chip">Chinese (Basic)</span>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="about-grid">
+    <div class="about-text">
+      <div class="slabel">About Me</div>
+      <h2 class="shead">Math-driven.<br>Systems-minded.</h2>
+      <p>I'm a <strong>BS Mathematics student at Bahauddin Zakariya University</strong> (CASPAM Department), where coursework in <span class="mono">Linear Algebra</span>, <span class="mono">Real Analysis</span>, and <span class="mono">Differential Equations</span> trained me to decompose complexity before writing a single line of code.</p>
+      <p>That foundation directly shapes how I build — from parsing structured data inputs with precision, to engineering <strong>context-aware AI applications</strong> that handle ambiguous, real-world queries cleanly.</p>
+      <p>3 years of freelance work delivering <strong>full-stack platforms, API integrations, and n8n automation pipelines</strong> means the theory ships as working software. I get it done.</p>
+    </div>
+    <div>
+      <div class="acard">
+        <div class="sgrid">
+          <div class="sbox"><span class="snum">3.69</span><span class="slbl">CGPA / BZU</span></div>
+          <div class="sbox"><span class="snum">3+</span><span class="slbl">Yrs Building</span></div>
+          <div class="sbox"><span class="snum">16+</span><span class="slbl">Tech Skills</span></div>
+          <div class="sbox"><span class="snum">4</span><span class="slbl">Languages</span></div>
+        </div>
+        <p style="font-size:.62rem;color:var(--slate3);letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin-bottom:8px;font-family:var(--mono)">Spoken Languages</p>
+        <div class="chips">
+          <span class="chip">English</span><span class="chip">Urdu</span>
+          <span class="chip">Saraiki</span><span class="chip">Chinese (Basic)</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="wrap reveal" id="projects">
-  <div class="slabel">Featured Work</div>
-  <h2 class="shead">Things I've built<br>that actually ship.</h2>
-  <div class="bento">
-    <div class="bc bc1">
-      <div>
-        <div class="pnum">Project 01</div>
-        <div class="picon">🌐</div>
-        <h3 class="ptitle">CODE MEET 2025 — Event Platform</h3>
-        <div class="ptags" style="margin-bottom:0">
-          <span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JavaScript</span><span class="ptag">Vercel</span>
-        </div>
-        <a href="https://code-meet-2025.vercel.app/" target="_blank" rel="noopener" class="plive">View Live ↗</a>
-      </div>
-      <div>
-        <p class="pdesc" style="margin-bottom:0">Official website for CODE MEET 2025. Designed and deployed end-to-end — architecture, UI, and deployment on Vercel. Also led the event as speaker and organiser, representing the tech community at BZU.</p>
-      </div>
-    </div>
-    <div class="bc bc2 math-card">
-      <div class="pnum"><strong>Project 02 — Academic Computational Engine</strong></div>
-      <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px">
-        <div class="picon" style="margin-bottom:0"><span class="picon-math">∑</span></div>
-        <h3 class="ptitle" style="margin-bottom:0">Math-Chatbot</h3>
-      </div>
-      <p class="pdesc">Academically rigorous AI engine for computational mathematics. Parses PDF textbooks dynamically, renders full LaTeX inline, and generates executable NumPy / SymPy / Matplotlib blocks on demand.</p>
-      <div class="ptags" style="margin-top:14px">
-        <span class="ptag">Python</span><span class="ptag">SymPy</span><span class="ptag">NumPy</span><span class="ptag">Matplotlib</span><span class="ptag">RAG</span>
-      </div>
-      <a href="https://github.com/rebiyamalik/Math-Chatbot" target="_blank" rel="noopener" class="plive">View Project ↗</a>
-    </div>
-    <div class="bc bc3 omni-card">
-      <div class="pnum">Project 03 — Portfolio AI Widget</div>
-      <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px">
-        <div class="picon" style="margin-bottom:0">🤖</div>
-        <h3 class="ptitle" style="margin-bottom:0">Omni-Agent</h3>
-      </div>
-      <p class="pdesc">Multilingual AI assistant embedded in this portfolio. Processes voice via Whisper, parses uploaded PDFs into RAG context, and responds in the user's language — English or Urdu.</p>
-      <div class="ptags" style="margin-top:8px">
-        <span class="ptag">LLM API</span><span class="ptag">Whisper</span><span class="ptag">PDF RAG</span><span class="ptag">Multilingual</span>
-      </div>
-    </div>
-  </div>
+  <div class="slabel">Featured Work</div>
+  <h2 class="shead">Things I've built<br>that actually ship.</h2>
+  <div class="bento">
+    <div class="bc bc1">
+      <div>
+        <div class="pnum">Project 01</div>
+        <div class="picon">🌐</div>
+        <h3 class="ptitle">CODE MEET 2025 — Event Platform</h3>
+        <div class="ptags" style="margin-bottom:0">
+          <span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JavaScript</span><span class="ptag">Vercel</span>
+        </div>
+        <a href="https://code-meet-2025.vercel.app/" target="_blank" rel="noopener" class="plive">View Live ↗</a>
+      </div>
+      <div>
+        <p class="pdesc" style="margin-bottom:0">Official website for CODE MEET 2025. Designed and deployed end-to-end — architecture, UI, and deployment on Vercel. Also led the event as speaker and organiser, representing the tech community at BZU.</p>
+      </div>
+    </div>
+    <div class="bc bc2 math-card">
+      <div class="pnum"><strong>Project 02 — Academic Computational Engine</strong></div>
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px">
+        <div class="picon" style="margin-bottom:0"><span class="picon-math">∑</span></div>
+        <h3 class="ptitle" style="margin-bottom:0">Math-Chatbot</h3>
+      </div>
+      <p class="pdesc">Academically rigorous AI engine for computational mathematics. Parses PDF textbooks dynamically, renders full LaTeX inline, and generates executable NumPy / SymPy / Matplotlib blocks on demand.</p>
+      <div class="ptags" style="margin-top:14px">
+        <span class="ptag">Python</span><span class="ptag">SymPy</span><span class="ptag">NumPy</span><span class="ptag">Matplotlib</span><span class="ptag">RAG</span>
+      </div>
+      <a href="https://github.com/rebiyamalik/Math-Chatbot" target="_blank" rel="noopener" class="plive">View Project ↗</a>
+    </div>
+    <div class="bc bc3 omni-card">
+      <div class="pnum">Project 03 — Portfolio AI Widget</div>
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px">
+        <div class="picon" style="margin-bottom:0">🤖</div>
+        <h3 class="ptitle" style="margin-bottom:0">Omni-Agent</h3>
+      </div>
+      <p class="pdesc">Multilingual AI assistant embedded in this portfolio. Processes voice via Whisper, parses uploaded PDFs into RAG context, and responds in the user's language — English or Urdu.</p>
+      <div class="ptags" style="margin-top:8px">
+        <span class="ptag">LLM API</span><span class="ptag">Whisper</span><span class="ptag">PDF RAG</span><span class="ptag">Multilingual</span>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="wrap reveal stack-section" id="stack">
-  <div class="slabel" style="justify-content:center">Tech Stack</div>
-  <h2 class="shead" style="margin-bottom:48px">Tools of the trade.</h2>
-  <div class="orbital-wrap" id="orbital">
-    <div class="ring-track rt1"></div><div class="ring-track rt2"></div><div class="ring-track rt3"></div>
-    <div class="orbital-core"><span>RI</span><span>Stack</span></div>
-    <div class="ring ring1" id="ring1"></div>
-    <div class="ring ring2" id="ring2"></div>
-    <div class="ring ring3" id="ring3"></div>
-  </div>
+  <div class="slabel" style="justify-content:center">Tech Stack</div>
+  <h2 class="shead" style="margin-bottom:48px">Tools of the trade.</h2>
+  <div class="orbital-wrap" id="orbital">
+    <div class="ring-track rt1"></div><div class="ring-track rt2"></div><div class="ring-track rt3"></div>
+    <div class="orbital-core"><span>RI</span><span>Stack</span></div>
+    <div class="ring ring1" id="ring1"></div>
+    <div class="ring ring2" id="ring2"></div>
+    <div class="ring ring3" id="ring3"></div>
+  </div>
 </div>
 
 <div class="wrap reveal">
-  <div class="slabel">Open Source</div>
-  <h2 class="shead" style="margin-bottom:28px">Code on GitHub.</h2>
-  <div class="gh-box">
-    <div class="gh-icon-wrap">⌥</div>
-    <div class="gh-text">
-      <h3>github.com/rebiyamalik</h3>
-      <p>All projects, experiments, and open-source work — from automation scripts to full web platforms. The complete engineering picture.</p>
-      <a href="https://github.com/rebiyamalik" target="_blank" rel="noopener" class="gh-link">View GitHub Profile ↗</a>
-    </div>
-  </div>
+  <div class="slabel">Open Source</div>
+  <h2 class="shead" style="margin-bottom:28px">Code on GitHub.</h2>
+  <div class="gh-box">
+    <div class="gh-icon-wrap">⌥</div>
+    <div class="gh-text">
+      <h3>github.com/rebiyamalik</h3>
+      <p>All projects, experiments, and open-source work — from automation scripts to full web platforms. The complete engineering picture.</p>
+      <a href="https://github.com/rebiyamalik" target="_blank" rel="noopener" class="gh-link">View GitHub Profile ↗</a>
+    </div>
+  </div>
 </div>
 
 <div class="wrap reveal" id="resume">
-  <div class="slabel">Resume</div>
-  <h2 class="shead">Full Background.</h2>
-  <div class="resume-wrap">
-    <div class="resume-header">
-      <div><div class="resume-name">Rebiya Ismail</div><div class="resume-title">Full-Stack Developer | UI/UX Designer | AI Engineer </div></div>
-      <div class="resume-contact">
-        <div><a href="mailto:rebiyaismail86@gmail.com">rebiyaismail86@gmail.com</a></div>
-        <div>+92 312 045 2699</div>
-        <div><a href="https://github.com/rebiyamalik" target="_blank">github.com/rebiyamalik</a></div>
-        <div><a href="https://www.linkedin.com/in/rebiya-ismail-b3b5252ba/" target="_blank">linkedin.com/in/rebiya-ismail</a></div>
-      </div>
-    </div>
-    <div class="resume-section">
-      <div class="resume-section-title">Summary</div>
-      <p class="resume-summary">Versatile professional with experience in full-stack development, digital marketing, UI/UX design, automation, graphic design, and data analysis. Skilled in building responsive websites, developing dashboards and reports, managing client projects, SEO, API integration, and visual branding. Strong analytical thinking, communication, and problem-solving abilities.</p>
-    </div>
-    <div class="resume-section">
-      <div class="resume-section-title">Experience</div>
-      <div class="exp-block">
-        <div class="exp-top"><span class="exp-role">Freelance Full-Stack Developer</span><span class="exp-period">2025 – Present</span></div>
-        <div class="exp-org">Independent · Remote</div>
-        <ul class="exp-bullets">
-          <li>Built responsive websites, landing pages, and automated backend workflows using Python and modern web technologies.</li>
-        </ul>
-      </div>
-      <div class="exp-block">
-        <div class="exp-top"><span class="exp-role">Freelance Data Analyst</span><span class="exp-period">2023 – 2024</span></div>
-        <div class="exp-org">Independent · Remote</div>
-        <ul class="exp-bullets">
-          <li>Created interactive dashboards, Excel worksheets, and revenue reports for data analysis and business insights.</li>
-        </ul>
-      </div>
-      <div class="exp-block">
-        <div class="exp-top"><span class="exp-role">Graphic Designer & Editor</span><span class="exp-period">2024 – 2026</span></div>
-        <div class="exp-org">Independent</div>
-        <ul class="exp-bullets">
-          <li>Designed resumes, logos, posters, and professional presentations to improve client branding and engagement.</li>
-        </ul>
-      </div>
-      <div class="exp-block">
-        <div class="exp-top"><span class="exp-role">Product Reseller</span><span class="exp-period">2021 – 2023</span></div>
-        <div class="exp-org">Oriflame</div>
-        <ul class="exp-bullets">
-          <li>Managed customer relationships, product promotions, and social media marketing campaigns.</li>
-        </ul>
-      </div>
-    </div>
+  <div class="slabel">Resume</div>
+  <h2 class="shead">Full Background.</h2>
+  <div class="resume-wrap">
+    <div class="resume-header">
+      <div><div class="resume-name">Rebiya Ismail</div><div class="resume-title">Full-Stack Developer | UI/UX Designer | AI Engineer </div></div>
+      <div class="resume-contact">
+        <div><a href="mailto:rebiyaismail86@gmail.com">rebiyaismail86@gmail.com</a></div>
+        <div>+92 312 045 2699</div>
+        <div><a href="https://github.com/rebiyamalik" target="_blank">github.com/rebiyamalik</a></div>
+        <div><a href="https://www.linkedin.com/in/rebiya-ismail-b3b5252ba/" target="_blank">linkedin.com/in/rebiya-ismail</a></div>
+      </div>
+    </div>
+    <div class="resume-section">
+      <div class="resume-section-title">Summary</div>
+      <p class="resume-summary">Versatile professional with experience in full-stack development, digital marketing, UI/UX design, automation, graphic design, and data analysis. Skilled in building responsive websites, developing dashboards and reports, managing client projects, SEO, API integration, and visual branding. Strong analytical thinking, communication, and problem-solving abilities.</p>
+    </div>
+    <div class="resume-section">
+      <div class="resume-section-title">Experience</div>
+      <div class="exp-block">
+        <div class="exp-top"><span class="exp-role">Freelance Full-Stack Developer</span><span class="exp-period">2025 – Present</span></div>
+        <div class="exp-org">Independent · Remote</div>
+        <ul class="exp-bullets">
+          <li>Built responsive websites, landing pages, and automated backend workflows using Python and modern web technologies.</li>
+        </ul>
+      </div>
+      <div class="exp-block">
+        <div class="exp-top"><span class="exp-role">Freelance Data Analyst</span><span class="exp-period">2023 – 2024</span></div>
+        <div class="exp-org">Independent · Remote</div>
+        <ul class="exp-bullets">
+          <li>Created interactive dashboards, Excel worksheets, and revenue reports for data analysis and business insights.</li>
+        </ul>
+      </div>
+      <div class="exp-block">
+        <div class="exp-top"><span class="exp-role">Graphic Designer & Editor</span><span class="exp-period">2024 – 2026</span></div>
+        <div class="exp-org">Independent</div>
+        <ul class="exp-bullets">
+          <li>Designed resumes, logos, posters, and professional presentations to improve client branding and engagement.</li>
+        </ul>
+      </div>
+      <div class="exp-block">
+        <div class="exp-top"><span class="exp-role">Product Reseller</span><span class="exp-period">2021 – 2023</span></div>
+        <div class="exp-org">Oriflame</div>
+        <ul class="exp-bullets">
+          <li>Managed customer relationships, product promotions, and social media marketing campaigns.</li>
+        </ul>
+      </div>
+    </div>
 
-    <div class="resume-section">
-      <div class="resume-section-title">Projects</div>
-      <div class="exp-block">
-        <div class="exp-top"><span class="exp-role">Math Chatbot Application</span><span class="exp-period">Python</span></div>
-        <ul class="exp-bullets">
-          <li>Developed an interactive chatbot capable of handling logical calculations and implemented structured workflows and prompt-based interaction systems.</li>
-        </ul>
-      </div>
-    </div>
+    <div class="resume-section">
+      <div class="resume-section-title">Projects</div>
+      <div class="exp-block">
+        <div class="exp-top"><span class="exp-role">Math Chatbot Application</span><span class="exp-period">Python</span></div>
+        <ul class="exp-bullets">
+          <li>Developed an interactive chatbot capable of handling logical calculations and implemented structured workflows and prompt-based interaction systems.</li>
+        </ul>
+      </div>
+    </div>
 
-    <div class="resume-section">
-      <div class="resume-section-title">Education</div>
-      <div class="edu-grid">
-        <div class="edu-card"><div class="edu-degree">BS Mathematics</div><div class="edu-inst">Bahauddin Zakariya University</div><div class="edu-detail">CGPA: 3.69 · 2023–2026</div></div>
-        <div class="edu-card"><div class="edu-degree">Pre-Engineering</div><div class="edu-inst">KIPS College, Multan</div><div class="edu-detail">Grade A</div></div>
-        <div class="edu-card"><div class="edu-degree">Matric (Science)</div><div class="edu-inst">GGHS Ayyazabad Maral</div><div class="edu-detail">Grade A+</div></div>
-      </div>
-    </div>
-    <div class="resume-section" style="margin-bottom:0">
-      <div class="resume-section-title">Technical Skills</div>
-      <div class="skill-cats">
-        <div class="skill-cat"><div class="skill-cat-title">Core Development</div><div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">PHP</span><span class="skill-tag">JavaScript</span><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">SQL</span></div></div>
-        <div class="skill-cat"><div class="skill-cat-title">AI Engineering</div><div class="skill-tags"><span class="skill-tag">Agentic Ai</span><span class="skill-tag">RAG System</span><span class="skill-tag">Prompt Engineering</span></div></div>
-        <div class="skill-cat"><div class="skill-cat-title">Automation & Design</div><div class="skill-tags"><span class="skill-tag">API Integration</span><span class="skill-tag">Figma</span><span class="skill-tag">Canva</span><span class="skill-tag">Git & GitHub</span></div></div>
-      </div>
-    </div>
-  </div>
+    <div class="resume-section">
+      <div class="resume-section-title">Education</div>
+      <div class="edu-grid">
+        <div class="edu-card"><div class="edu-degree">BS Mathematics</div><div class="edu-inst">Bahauddin Zakariya University</div><div class="edu-detail">CGPA: 3.67 · 2023–2026</div></div>
+        <div class="edu-card"><div class="edu-degree">Pre-Engineering</div><div class="edu-inst">KIPS College, Multan</div><div class="edu-detail">Grade A</div></div>
+        <div class="edu-card"><div class="edu-degree">Matric (Science)</div><div class="edu-inst">GGHS Ayyazabad Maral</div><div class="edu-detail">Grade A+</div></div>
+      </div>
+    </div>
+    <div class="resume-section" style="margin-bottom:0">
+      <div class="resume-section-title">Technical Skills</div>
+      <div class="skill-cats">
+        <div class="skill-cat"><div class="skill-cat-title">Core Development</div><div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">PHP</span><span class="skill-tag">JavaScript</span><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">SQL</span></div></div>
+        <div class="skill-cat"><div class="skill-cat-title">AI Engineering</div><div class="skill-tags"><span class="skill-tag">Agentic Ai</span><span class="skill-tag">RAG System</span><span class="skill-tag">Prompt Engineering</span></div></div>
+        <div class="skill-cat"><div class="skill-cat-title">Automation & Design</div><div class="skill-tags"><span class="skill-tag">API Integration</span><span class="skill-tag">Figma</span><span class="skill-tag">Canva</span><span class="skill-tag">Git & GitHub</span></div></div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="wrap reveal" id="contact">
-  <div class="cbox">
-    <span class="cemoji">✉️</span>
-    <h2>Let's build something.</h2>
-    <p>Backend infrastructure, AI tooling, Automation pipelines — or just a great idea worth exploring.</p>
-    <div class="clinks">
-      <a href="mailto:rebiyaismail86@gmail.com" class="clink">📧 rebiyaismail86@gmail.com</a>
-      <a href="tel:+923120452699" class="clink">📱 +92 312 045 2699</a>
-      <a href="https://www.linkedin.com/in/rebiya-ismail-b3b5252ba/" target="_blank" rel="noopener" class="clink">💼 linkedin.com/in/rebiya-ismail</a>
-      <a href="https://github.com/rebiyamalik" target="_blank" rel="noopener" class="clink">⌥ github.com/rebiyamalik</a>
-      <a href="#" class="clink">📍 New Multan, Pakistan</a>
-    </div>
-  </div>
+  <div class="cbox">
+    <span class="cemoji">✉️</span>
+    <h2>Let's build something.</h2>
+    <p>Backend infrastructure, AI tooling, Automation pipelines — or just a great idea worth exploring.</p>
+    <div class="clinks">
+      <a href="mailto:rebiyaismail86@gmail.com" class="clink">📧 rebiyaismail86@gmail.com</a>
+      <a href="tel:+923120452699" class="clink">📱 +92 312 045 2699</a>
+      <a href="https://www.linkedin.com/in/rebiya-ismail-b3b5252ba/" target="_blank" rel="noopener" class="clink">💼 linkedin.com/in/rebiya-ismail</a>
+      <a href="https://github.com/rebiyamalik" target="_blank" rel="noopener" class="clink">⌥ github.com/rebiyamalik</a>
+      <a href="#" class="clink">📍 New Multan, Pakistan</a>
+    </div>
+  </div>
 </div>
 
 <footer>© 2025 Rebiya Ismail · BS Mathematics · BZU CASPAM ✦</footer>
 
 <button id="omni-toggle" title="Chat with Omni-Agent">🤖</button>
 <div id="omni-widget">
-  <div class="omni-header">
-    <div class="omni-avatar">🤖</div>
-    <div class="omni-title"><h4>Omni-Agent</h4><p>Rebiya's AI Portfolio Assistant</p></div>
-    <button class="omni-close" id="omni-close">✕</button>
-  </div>
-  <div class="omni-msgs" id="omni-msgs">
-    <div class="msg msg-bot">Hi! I'm <strong>Omni-Agent</strong> — Rebiya's embedded AI assistant.<br><br>Ask me about her <strong>skills</strong>, <strong>projects</strong>, <strong>contact</strong>, or anything technical. I also understand <strong>Urdu / اردو</strong> 🧠<br><br><small style="color:var(--slate3);font-family:var(--mono);font-size:.7rem">💡 Try: "Tell me about Rebiya" · "What projects?" · "Tech stack?"</small></div>
-  </div>
-  <div class="omni-input-row">
-    <textarea class="omni-input" id="omni-input" placeholder="Ask anything..." rows="1"></textarea>
-    <button class="omni-send" id="omni-send">➤</button>
-  </div>
-  <div class="omni-footer"><span>Powered by Claude · rebiyamalik.vercel.app</span></div>
+  <div class="omni-header">
+    <div class="omni-avatar">🤖</div>
+    <div class="omni-title"><h4>Omni-Agent</h4><p>Rebiya's AI Portfolio Assistant</p></div>
+    <button class="omni-close" id="omni-close">✕</button>
+  </div>
+  <div class="omni-msgs" id="omni-msgs">
+    <div class="msg msg-bot">Hi! I'm <strong>Omni-Agent</strong> — Rebiya's embedded AI assistant.<br><br>Ask me about her <strong>skills</strong>, <strong>projects</strong>, <strong>contact</strong>, or anything technical. I also understand <strong>Urdu / اردو</strong> 🧠<br><br><small style="color:var(--slate3);font-family:var(--mono);font-size:.7rem">💡 Try: "Tell me about Rebiya" · "What projects?" · "Tech stack?"</small></div>
+  </div>
+  <div class="omni-input-row">
+    <textarea class="omni-input" id="omni-input" placeholder="Ask anything..." rows="1"></textarea>
+    <button class="omni-send" id="omni-send">➤</button>
+  </div>
+  <div class="omni-footer"><span>Powered by Claude · rebiyamalik.vercel.app</span></div>
 </div>
 
 <script>
 /* ══════════════════════════════════
-   AURORA BACKGROUND (new style 3)
-   Flowing gradient aurora effect
+   AURORA BACKGROUND (new style 3)
+   Flowing gradient aurora effect
 ══════════════════════════════════ */
 (function(){
-  const cv=document.getElementById('aurora-canvas');
-  const ctx=cv.getContext('2d');
-  let W,H,t=0;
-  const blobs=[
-    {x:.2,y:.3,rx:500,ry:260,hue:215,speed:.0004},
-    {x:.75,y:.2,rx:420,ry:200,hue:230,speed:.0006},
-    {x:.5,y:.75,rx:460,ry:220,hue:200,speed:.0005},
-    {x:.15,y:.7,rx:340,ry:180,hue:250,speed:.0003},
-    {x:.85,y:.65,rx:380,ry:190,hue:210,speed:.0007},
-  ];
-  function resize(){W=cv.width=window.innerWidth;H=cv.height=window.innerHeight}
-  function draw(){
-    ctx.clearRect(0,0,W,H);
-    blobs.forEach((b,i)=>{
-      const ox=Math.sin(t*b.speed*1000+i)*0.06;
-      const oy=Math.cos(t*b.speed*800+i*1.3)*0.05;
-      const cx=(b.x+ox)*W, cy=(b.y+oy)*H;
-      const pulse=1+Math.sin(t*b.speed*600+i)*0.08;
-      const grad=ctx.createRadialGradient(cx,cy,0,cx,cy,b.rx*pulse);
-      grad.addColorStop(0,`hsla(${b.hue},80%,55%,0.14)`);
-      grad.addColorStop(0.4,`hsla(${b.hue+15},70%,60%,0.07)`);
-      grad.addColorStop(1,`hsla(${b.hue},60%,65%,0)`);
-      ctx.save();
-      ctx.scale(1,b.ry/(b.rx*pulse));
-      ctx.fillStyle=grad;
-      ctx.beginPath();
-      ctx.arc(cx,cy*(b.rx*pulse/b.ry),b.rx*pulse,0,Math.PI*2);
-      ctx.fill();
-      ctx.restore();
-    });
-    t++;
-    requestAnimationFrame(draw);
-  }
-  window.addEventListener('resize',resize);
-  resize();draw();
+  const cv=document.getElementById('aurora-canvas');
+  const ctx=cv.getContext('2d');
+  let W,H,t=0;
+  const blobs=[
+    {x:.2,y:.3,rx:500,ry:260,hue:215,speed:.0004},
+    {x:.75,y:.2,rx:420,ry:200,hue:230,speed:.0006},
+    {x:.5,y:.75,rx:460,ry:220,hue:200,speed:.0005},
+    {x:.15,y:.7,rx:340,ry:180,hue:250,speed:.0003},
+    {x:.85,y:.65,rx:380,ry:190,hue:210,speed:.0007},
+  ];
+  function resize(){W=cv.width=window.innerWidth;H=cv.height=window.innerHeight}
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    blobs.forEach((b,i)=>{
+      const ox=Math.sin(t*b.speed*1000+i)*0.06;
+      const oy=Math.cos(t*b.speed*800+i*1.3)*0.05;
+      const cx=(b.x+ox)*W, cy=(b.y+oy)*H;
+      const pulse=1+Math.sin(t*b.speed*600+i)*0.08;
+      const grad=ctx.createRadialGradient(cx,cy,0,cx,cy,b.rx*pulse);
+      grad.addColorStop(0,`hsla(${b.hue},80%,55%,0.14)`);
+      grad.addColorStop(0.4,`hsla(${b.hue+15},70%,60%,0.07)`);
+      grad.addColorStop(1,`hsla(${b.hue},60%,65%,0)`);
+      ctx.save();
+      ctx.scale(1,b.ry/(b.rx*pulse));
+      ctx.fillStyle=grad;
+      ctx.beginPath();
+      ctx.arc(cx,cy*(b.rx*pulse/b.ry),b.rx*pulse,0,Math.PI*2);
+      ctx.fill();
+      ctx.restore();
+    });
+    t++;
+    requestAnimationFrame(draw);
+  }
+  window.addEventListener('resize',resize);
+  resize();draw();
 })();
 
 /* ══════════════════════════════════
-   PARTICLES
+   PARTICLES
 ══════════════════════════════════ */
 (function(){
-  const pf=document.getElementById('particles');
-  for(let i=0;i<28;i++){
-    const p=document.createElement('div');p.className='p-dot';
-    const sz=1+Math.random()*3;
-    const blue=Math.random()>.5;
-    p.style.cssText=`width:${sz}px;height:${sz}px;left:${Math.random()*100}%;bottom:0;background:${blue?'rgba(37,99,235,0.35)':'rgba(124,58,237,0.25)'};animation-duration:${12+Math.random()*22}s;animation-delay:${Math.random()*20}s;`;
-    pf.appendChild(p);
-  }
+  const pf=document.getElementById('particles');
+  for(let i=0;i<28;i++){
+    const p=document.createElement('div');p.className='p-dot';
+    const sz=1+Math.random()*3;
+    const blue=Math.random()>.5;
+    p.style.cssText=`width:${sz}px;height:${sz}px;left:${Math.random()*100}%;bottom:0;background:${blue?'rgba(37,99,235,0.35)':'rgba(124,58,237,0.25)'};animation-duration:${12+Math.random()*22}s;animation-delay:${Math.random()*20}s;`;
+    pf.appendChild(p);
+  }
 })();
 
 /* ══════════════════════════════════
-   CURSOR
+   CURSOR
 ══════════════════════════════════ */
 const cd=document.getElementById('cd'),cr=document.getElementById('cr');
 let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cd.style.left=mx+'px';cd.style.top=my+'px';spawnFlower(mx,my)});
 (function animR(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;cr.style.left=rx+'px';cr.style.top=ry+'px';requestAnimationFrame(animR)})();
 document.querySelectorAll('a,button,textarea').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{cr.style.width='46px';cr.style.height='46px';cr.style.borderColor='rgba(37,99,235,.7)';cd.style.opacity='0'});
-  el.addEventListener('mouseleave',()=>{cr.style.width='32px';cr.style.height='32px';cr.style.borderColor='rgba(37,99,235,.4)';cd.style.opacity='1'});
+  el.addEventListener('mouseenter',()=>{cr.style.width='46px';cr.style.height='46px';cr.style.borderColor='rgba(37,99,235,.7)';cd.style.opacity='0'});
+  el.addEventListener('mouseleave',()=>{cr.style.width='32px';cr.style.height='32px';cr.style.borderColor='rgba(37,99,235,.4)';cd.style.opacity='1'});
 });
 
 /* ══════════════════════════════════
-   FLOWER TRAIL
+   FLOWER TRAIL
 ══════════════════════════════════ */
 const flw=['🌸','🌺','🌼','🌷','✿','🌻','💮'];
 let lt=0;
 function spawnFlower(x,y){const n=Date.now();if(n-lt<75)return;lt=n;const e=document.createElement('div');e.className='fp';e.textContent=flw[Math.floor(Math.random()*flw.length)];e.style.cssText=`left:${x}px;top:${y}px;font-size:${11+Math.random()*13}px;animation-duration:${.65+Math.random()*.5}s`;document.body.appendChild(e);setTimeout(()=>e.remove(),1200)}
 
 /* ══════════════════════════════════
-   ORBITAL STACK
+   ORBITAL STACK
 ══════════════════════════════════ */
 const RINGS=[
-  {id:'ring1',r:95,tools:[{icon:'🐍',label:'Python'},{icon:'⚙️',label:'n8n'},{icon:'🤖',label:'AI/LLMs'}]},
-  {id:'ring2',r:165,tools:[{icon:'🌐',label:'HTML'},{icon:'🎨',label:'CSS'},{icon:'📜',label:'JS'},{icon:'🐘',label:'PHP'},{icon:'🗄️',label:'SQL'},{icon:'🔗',label:'APIs'}]},
-  {id:'ring3',r:240,tools:[{icon:'🎯',label:'Figma'},{icon:'🐙',label:'GitHub'},{icon:'☁️',label:'Vercel'},{icon:'📊',label:'Canva'},{icon:'🔢',label:'NumPy'},{icon:'📐',label:'SymPy'},{icon:'📡',label:'Automation'}]}
+  {id:'ring1',r:95,tools:[{icon:'🐍',label:'Python'},{icon:'⚙️',label:'n8n'},{icon:'🤖',label:'AI/LLMs'}]},
+  {id:'ring2',r:165,tools:[{icon:'🌐',label:'HTML'},{icon:'🎨',label:'CSS'},{icon:'📜',label:'JS'},{icon:'🐘',label:'PHP'},{icon:'🗄️',label:'SQL'},{icon:'🔗',label:'APIs'}]},
+  {id:'ring3',r:240,tools:[{icon:'🎯',label:'Figma'},{icon:'🐙',label:'GitHub'},{icon:'☁️',label:'Vercel'},{icon:'📊',label:'Canva'},{icon:'🔢',label:'NumPy'},{icon:'📐',label:'SymPy'},{icon:'📡',label:'Automation'}]}
 ];
 RINGS.forEach(ring=>{
-  const el=document.getElementById(ring.id);
-  ring.tools.forEach((tool,i)=>{
-    const angle=(i/ring.tools.length)*2*Math.PI;
-    const x=ring.r*Math.cos(angle),y=ring.r*Math.sin(angle);
-    const node=document.createElement('div');node.className='tool-node';node.style.cssText=`margin-left:${x}px;margin-top:${y}px`;
-    const badge=document.createElement('div');badge.className='tool-badge';
-    badge.innerHTML=`<div class="tool-icon-wrap">${tool.icon}</div><span class="tool-label">${tool.label}</span>`;
-    node.appendChild(badge);el.appendChild(node);
-  });
+  const el=document.getElementById(ring.id);
+  ring.tools.forEach((tool,i)=>{
+    const angle=(i/ring.tools.length)*2*Math.PI;
+    const x=ring.r*Math.cos(angle),y=ring.r*Math.sin(angle);
+    const node=document.createElement('div');node.className='tool-node';node.style.cssText=`margin-left:${x}px;margin-top:${y}px`;
+    const badge=document.createElement('div');badge.className='tool-badge';
+    badge.innerHTML=`<div class="tool-icon-wrap">${tool.icon}</div><span class="tool-label">${tool.label}</span>`;
+    node.appendChild(badge);el.appendChild(node);
+  });
 });
 
 /* ══════════════════════════════════
-   SCROLL REVEAL
+   SCROLL REVEAL
 ══════════════════════════════════ */
 const obs=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.08});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
 /* ══════════════════════════════════
-   OMNI-AGENT WIDGET
+   OMNI-AGENT WIDGET
 ══════════════════════════════════ */
 const OMNI_SYSTEM=`You are the 'Omni-Agent,' the core interactive AI assistant embedded directly into Rebiya Ismail's engineering portfolio at rebiyamalik.vercel.app.
 
@@ -744,41 +721,41 @@ function addTyping(){const d=document.createElement('div');d.className='msg msg-
 function removeTyping(){const t=document.getElementById('typing-indicator');if(t)t.remove()}
 
 const DEMO={
-  about:"<strong>Rebiya Ismail</strong> is a BS Mathematics student at BZU CASPAM (CGPA 3.69) and a fresher full-stack developer with 3+ years of freelance engineering experience.<br><br>She specialises in:<br>• Backend infrastructure & API integration<br>• Context-aware AI tooling (RAG, LLM pipelines)<br>• Workflow automation with n8n<br>• Computational math applied to engineering problems",
-  projects:"Rebiya's live projects:<br><br>• <strong>CODE MEET 2025</strong> — Official event platform → <a href='https://code-meet-2025.vercel.app/' target='_blank' style='color:var(--blue)'>View Live ↗</a><br>• <strong>Math-Chatbot</strong> — Academic AI engine with LaTeX, PDF parsing & equation plotting<br>• <strong>Omni-Agent</strong> — This multilingual portfolio assistant",
-  skills:"Tech stack:<br><br><strong>Backend:</strong> Python, PHP, JavaScript, SQL<br><strong>AI/ML:</strong> LLM APIs, RAG, Whisper, SymPy, NumPy, Matplotlib<br><strong>Automation:</strong> n8n, API integration, PDF parsing<br><strong>UI/UX:</strong> HTML/CSS, Figma, Vercel, GitHub",
-  contact:"📧 rebiyaismail86@gmail.com<br>📱 +92 312 045 2699<br>🔗 <a href='https://linkedin.com/in/rebiya-ismail-b3b5252ba/' target='_blank' style='color:var(--blue)'>LinkedIn</a><br>⌥ <a href='https://github.com/rebiyamalik' target='_blank' style='color:var(--blue)'>GitHub</a>"
+  about:"<strong>Rebiya Ismail</strong> is a BS Mathematics student at BZU CASPAM (CGPA 3.69) and a fresher full-stack developer with 3+ years of freelance engineering experience.<br><br>She specialises in:<br>• Backend infrastructure & API integration<br>• Context-aware AI tooling (RAG, LLM pipelines)<br>• Workflow automation with n8n<br>• Computational math applied to engineering problems",
+  projects:"Rebiya's live projects:<br><br>• <strong>CODE MEET 2025</strong> — Official event platform → <a href='https://code-meet-2025.vercel.app/' target='_blank' style='color:var(--blue)'>View Live ↗</a><br>• <strong>Math-Chatbot</strong> — Academic AI engine with LaTeX, PDF parsing & equation plotting<br>• <strong>Omni-Agent</strong> — This multilingual portfolio assistant",
+  skills:"Tech stack:<br><br><strong>Backend:</strong> Python, PHP, JavaScript, SQL<br><strong>AI/ML:</strong> LLM APIs, RAG, Whisper, SymPy, NumPy, Matplotlib<br><strong>Automation:</strong> n8n, API integration, PDF parsing<br><strong>UI/UX:</strong> HTML/CSS, Figma, Vercel, GitHub",
+  contact:"📧 rebiyaismail86@gmail.com<br>📱 +92 312 045 2699<br>🔗 <a href='https://linkedin.com/in/rebiya-ismail-b3b5252ba/' target='_blank' style='color:var(--blue)'>LinkedIn</a><br>⌥ <a href='https://github.com/rebiyamalik' target='_blank' style='color:var(--blue)'>GitHub</a>"
 };
 
 function demoReply(t){
-  const q=t.toLowerCase();
-  if(q.match(/about|who|rebiya|background|math|cgpa|university|bzu/))return DEMO.about;
-  if(q.match(/project|built|work|chatbot|code meet|omni|website/))return DEMO.projects;
-  if(q.match(/skill|stack|tech|python|language|tool|use/))return DEMO.skills;
-  if(q.match(/contact|email|linkedin|github|reach|hire/))return DEMO.contact;
-  if(q.match(/ارد|salam|السلام/i))return"السلام علیکم! 👋<br><br>میں <strong>Omni-Agent</strong> ہوں — Rebiya کا AI اسسٹنٹ۔ آپ اس کی skills، projects، یا background کے بارے میں پوچھ سکتے ہیں!";
-  return"I'm running in <strong>demo mode</strong>.<br><br>Ask me about:<br>• Rebiya's background & CGPA<br>• Her projects<br>• Her tech stack<br>• Contact details";
+  const q=t.toLowerCase();
+  if(q.match(/about|who|rebiya|background|math|cgpa|university|bzu/))return DEMO.about;
+  if(q.match(/project|built|work|chatbot|code meet|omni|website/))return DEMO.projects;
+  if(q.match(/skill|stack|tech|python|language|tool|use/))return DEMO.skills;
+  if(q.match(/contact|email|linkedin|github|reach|hire/))return DEMO.contact;
+  if(q.match(/ارد|salam|السلام/i))return"السلام علیکم! 👋<br><br>میں <strong>Omni-Agent</strong> ہوں — Rebiya کا AI اسسٹنٹ۔ آپ اس کی skills، projects، یا background کے بارے میں پوچھ سکتے ہیں!";
+  return"I'm running in <strong>demo mode</strong>.<br><br>Ask me about:<br>• Rebiya's background & CGPA<br>• Her projects<br>• Her tech stack<br>• Contact details";
 }
 
 let _apiOk=null;
 async function smartSend(text){
-  if(_apiOk===false)return demoReply(text);
-  try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:800,system:OMNI_SYSTEM,messages:chatHistory})});
-    if(!res.ok)throw new Error(`${res.status}`);
-    const data=await res.json();_apiOk=true;
-    return data.content?.map(b=>b.text||'').join('')||'Sorry, no response.';
-  }catch(e){_apiOk=false;return demoReply(text)}
+  if(_apiOk===false)return demoReply(text);
+  try{
+    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:800,system:OMNI_SYSTEM,messages:chatHistory})});
+    if(!res.ok)throw new Error(`${res.status}`);
+    const data=await res.json();_apiOk=true;
+    return data.content?.map(b=>b.text||'').join('')||'Sorry, no response.';
+  }catch(e){_apiOk=false;return demoReply(text)}
 }
 
 async function sendMsg(){
-  const text=input.value.trim();if(!text)return;
-  addMsg(text,'user');chatHistory.push({role:'user',content:text});
-  input.value='';input.style.height='auto';addTyping();
-  const reply=await smartSend(text);removeTyping();
-  addMsg(reply.replace(/\n\n/g,'<br><br>').replace(/\n/g,'<br>').replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>'),'bot');
-  chatHistory.push({role:'assistant',content:reply});
-  if(chatHistory.length>20)chatHistory=chatHistory.slice(-18);
+  const text=input.value.trim();if(!text)return;
+  addMsg(text,'user');chatHistory.push({role:'user',content:text});
+  input.value='';input.style.height='auto';addTyping();
+  const reply=await smartSend(text);removeTyping();
+  addMsg(reply.replace(/\n\n/g,'<br><br>').replace(/\n/g,'<br>').replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>'),'bot');
+  chatHistory.push({role:'assistant',content:reply});
+  if(chatHistory.length>20)chatHistory=chatHistory.slice(-18);
 }
 </script>
 </body>
