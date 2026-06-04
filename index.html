@@ -107,9 +107,9 @@ nav{
 .live-dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 8px rgba(22,163,74,.6);animation:blink 2s ease-in-out infinite}
 @keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.65)}}
 .name-wrap{position:relative;margin-bottom:24px;display:inline-block}
-.hero-name{font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(3.8rem,11vw,9rem);line-height:.88;letter-spacing:-.04em;color:var(--dark);position:relative;z-index:3;animation:fu .8s .1s ease both,fl1 7s 1s ease-in-out infinite}
-.hero-g1{position:absolute;top:0;left:0;right:0;font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(3.8rem,11vw,9rem);line-height:.88;letter-spacing:-.04em;color:var(--blue);opacity:.15;z-index:2;pointer-events:none;animation:fl2 9s ease-in-out infinite}
-.hero-g2{position:absolute;top:0;left:0;right:0;font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(3.8rem,11vw,9rem);line-height:.88;letter-spacing:-.04em;color:var(--violet);opacity:.08;z-index:1;pointer-events:none;filter:blur(3px);animation:fl3 12s ease-in-out infinite}
+.hero-name{font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(3.5rem,10vw,9rem);line-height:.88;letter-spacing:-.04em;color:var(--dark);position:relative;z-index:3;animation:fu .8s .1s ease both,fl1 7s 1s ease-in-out infinite}
+.hero-g1{position:absolute;top:0;left:0;right:0;font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(3.5rem,10vw,9rem);line-height:.88;letter-spacing:-.04em;color:var(--blue);opacity:.15;z-index:2;pointer-events:none;animation:fl2 9s ease-in-out infinite}
+.hero-g2{position:absolute;top:0;left:0;right:0;font-family:'Outfit',sans-serif;font-weight:800;font-size:clamp(3.5rem,10vw,9rem);line-height:.88;letter-spacing:-.04em;color:var(--violet);opacity:.08;z-index:1;pointer-events:none;filter:blur(3px);animation:fl3 12s ease-in-out infinite}
 .hero-name::before{content:attr(data-text);position:absolute;top:0;left:3px;color:var(--blue-mid);clip-path:polygon(0 22%,100% 22%,100% 42%,0 42%);opacity:0;animation:glitch 8s infinite}
 @keyframes glitch{0%,92%,100%{opacity:0;transform:none}93%{opacity:.5;transform:translate(-4px,1px)}95%{opacity:.25;transform:translate(3px,-2px)}97%{opacity:0}}
 @keyframes fl1{0%,100%{transform:translateY(0)}40%{transform:translateY(-7px) rotate(.2deg)}70%{transform:translateY(4px) rotate(-.15deg)}}
@@ -117,7 +117,7 @@ nav{
 @keyframes fl3{0%,100%{transform:translate(0,0)}30%{transform:translate(-9px,7px)}65%{transform:translate(11px,-5px)}}
 .hero-formula{font-family:var(--mono);font-size:clamp(.76rem,1.8vw,.9rem);color:var(--blue);letter-spacing:.04em;margin-bottom:16px;opacity:.75;animation:fu .8s .2s ease both}
 .hero-formula span{color:var(--violet)}
-.hero-sub{font-size:clamp(.92rem,2vw,1.06rem);color:var(--slate2);font-weight:400;max-width:540px;line-height:1.88;margin-bottom:44px;animation:fu .8s .35s ease both}
+.hero-sub{font-size:clamp(.92rem,2vw,1.06rem);color:var(--slate2);font-weight:400;max-width:540px;line-height:1.88;margin-bottom:44px;animation:fu .8s .35s ease both; margin-left:auto; margin-right:auto;}
 .hero-sub strong{color:var(--dark)}
 .cta-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;animation:fu .8s .5s ease both}
 .btn1{font-size:.85rem;font-weight:700;letter-spacing:.04em;padding:13px 30px;border-radius:10px;background:var(--blue);color:#fff;border:none;text-decoration:none;transition:all .25s;box-shadow:0 4px 20px rgba(37,99,235,.3)}
@@ -187,8 +187,8 @@ nav{
 .omni-card:hover .ptag{background:rgba(217,119,6,.13)}
 
 /* ORBITAL STACK (PROFESSIONAL ENGINE LABELS) */
-.stack-section{text-align:center}
-.orbital-wrap{position:relative;width:560px;height:560px;margin:0 auto}
+.stack-section{text-align:center; overflow:hidden;}
+.orbital-wrap{position:relative;width:560px;height:560px;margin:0 auto; transition: transform 0.3s ease;}
 .orbital-core{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:86px;height:86px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2px;z-index:10;box-shadow:0 0 30px rgba(37,99,235,.35)}
 .orbital-core span:first-child{font-family:'Outfit',sans-serif;font-weight:800;font-size:1rem;color:#fff}
 .orbital-core span:last-child{font-size:.48rem;font-weight:700;color:rgba(255,255,255,.7);letter-spacing:.1em;text-transform:uppercase;font-family:var(--mono)}
@@ -215,7 +215,7 @@ nav{
 /* GITHUB BOX */
 .gh-box{display:flex;align-items:center;gap:28px;background:var(--card);border:1px solid rgba(37,99,235,0.12);border-radius:18px;padding:32px 36px;position:relative;overflow:hidden;transition:all .3s;box-shadow:0 2px 16px rgba(37,99,235,.07)}
 .gh-box:hover{border-color:rgba(37,99,235,0.28);box-shadow:0 8px 32px rgba(37,99,235,.13);transform:translateY(-3px)}
-.gh-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),transparent)}
+.gh-box::before{content:'position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),transparent)}
 .gh-icon-wrap{width:60px;height:60px;min-width:60px;border-radius:14px;background:var(--blue-pale);border:1px solid rgba(37,99,235,0.2);display:flex;align-items:center;justify-content:center;font-size:1.7rem}
 .gh-text h3{font-family:'Outfit',sans-serif;font-weight:700;font-size:1.1rem;color:var(--dark);margin-bottom:5px}
 .gh-text p{font-size:.87rem;color:var(--slate2);line-height:1.7;margin-bottom:16px}
@@ -253,16 +253,6 @@ nav{
 .skill-cat-title{font-family:var(--mono);font-size:.63rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
 .skill-tags{display:flex;flex-wrap:wrap;gap:6px}
 .skill-tag{font-size:.7rem;font-weight:600;padding:3px 10px;border-radius:6px;background:var(--blue-pale);color:var(--blue);border:1px solid rgba(37,99,235,0.15)}
-
-/* ACHIEVEMENTS */
-.agrid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
-.ai{display:flex;align-items:flex-start;gap:12px;background:var(--card);border:1px solid rgba(37,99,235,0.1);border-radius:13px;padding:16px 18px;transition:all .25s;box-shadow:0 1px 8px rgba(37,99,235,.05)}
-.ai:hover {border-color:rgba(37,99,235,0.28);transform:translateX(4px);box-shadow:0 4px 18px rgba(37,99,235,.1)}
-.adot{width:6px;min-width:6px;height:6px;background:var(--blue);border-radius:50%;margin-top:8px}
-.ai p{font-size:.855rem;color:var(--slate2);line-height:1.6}
-.ai strong{color:var(--dark)}
-.ach-link{color:var(--blue);text-decoration:none;border-bottom:1px dashed rgba(37,99,235,.35);transition:border-color .2s}
-.ach-link:hover{border-color:var(--blue)}
 
 /* CONTACT ZONE */
 .cbox{max-width:540px;margin:0 auto;background:var(--card);border:1px solid rgba(37,99,235,0.14);border-radius:22px;padding:52px 42px;position:relative;overflow:hidden;text-align:center;box-shadow:0 8px 40px rgba(37,99,235,.1)}
@@ -307,25 +297,58 @@ footer{text-align:center;padding:22px;font-size:.72rem;color:var(--slate4);lette
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 
+/* ══════════════════════════════════
+   ENHANCED RESPONSIVE MEDIA QUERIES
+══════════════════════════════════ */
+@media(max-width:1024px){
+  .wrap{padding:80px 40px}
+  .bento{grid-template-columns:repeat(2,1fr)}
+  .bc1{grid-column:1 / 3}
+  .bc2{grid-column:1 / 2}
+  .bc3{grid-column:2 / 3}
+  .orbital-wrap{transform:scale(0.85); transform-origin:center; margin-bottom:-40px;}
+}
+
 @media(max-width:768px){
-  nav{padding:13px 18px}
-  .nav-links{gap:14px}
-  .wrap{padding:56px 18px}
-  .about-grid,.skill-cats,.edu-grid{grid-template-columns:1fr;gap:28px}
+  nav{padding:12px 20px; flex-direction:column; gap:12px;}
+  .nav-links{gap:12px; flex-wrap:wrap; justify-content:center;}
+  .wrap{padding:60px 24px}
+  .about-grid,.skill-cats,.edu-grid{grid-template-columns:1fr;gap:24px}
   .bento{grid-template-columns:1fr}
-  .bc1,.bc2,.bc3{grid-column:1/-1;grid-row:auto}
-  .bc1{display:flex;flex-direction:column;padding:28px 22px;gap:24px}
-  .agrid{grid-template-columns:1fr}
+  .bc1,.bc2,.bc3{grid-column:1 / -1;grid-row:auto}
+  .bc1{display:flex;flex-direction:column;padding:28px 22px;gap:20px}
   .cbox{padding:36px 20px}
   .clink{min-width:0;width:100%}
-  .gh-box{flex-direction:column;padding:26px 20px;gap:20px}
-  .resume-header{flex-direction:column;gap:16px}
-  .resume-contact{text-align:left}
-  #omni-widget{width:calc(100vw - 24px);right:12px;bottom:88px}
+  .gh-box{flex-direction:column;padding:26px 20px;gap:20px;text-align:center;}
+  .gh-link{margin:0 auto;}
+  .resume-header{flex-direction:column;gap:16px;text-align:center;align-items:center;}
+  .resume-contact{text-align:center;}
+  #omni-widget{width:calc(100vw - 32px);right:16px;bottom:90px;}
+  
+  /* Prevent large empty vertical spaces when scaling the orbital stack down */
+  .orbital-wrap{transform:scale(0.65); transform-origin:top center; margin-bottom:-190px;}
 }
+
 @media(max-width:480px){
-  .nav-links li:not(:last-child):not(:nth-last-child(2)){display:none}
-  .orbital-wrap{transform:scale(0.57);transform-origin:top center;margin-bottom:-165px}
+  .hero-name{font-size:3.2rem;}
+  .hero-sub{font-size:0.9rem; padding:0 10px;}
+  .cta-row{flex-direction:column; width:100%; padding:0 20px;}
+  .btn1, .btn2{width:100%; text-align:center;}
+  
+  /* Horizontal scroll for navigation instead of hiding links entirely */
+  .nav-links{
+    display:flex; 
+    overflow-x:auto; 
+    padding-bottom:5px; 
+    justify-content:flex-start; 
+    -webkit-overflow-scrolling:touch; 
+    width:100%; 
+    white-space:nowrap;
+  }
+  .nav-links::-webkit-scrollbar{display:none;}
+  
+  /* Smooth scaling for the smallest displays */
+  .orbital-wrap{transform:scale(0.48); transform-origin:top center; margin-bottom:-280px;}
 }
 </style>
 </head>
@@ -365,7 +388,7 @@ footer{text-align:center;padding:22px;font-size:.72rem;color:var(--slate4);lette
     <h1 class="hero-name" data-text="REBIYA ISMAIL">REBIYA<br>ISMAIL</h1>
   </div>
   <p class="hero-formula">Computational Mathematics → AI Architecture → Clean Web Systems</p>
-  <p class="hero-sub"><strong>Math-driven engineer dedicated to building scalable digital infrastructure. I transform complex logical frameworks into actionable AI tooling and automated systems, specializing in RAG architectures and reliable backend pipelines that translate first-principles analysis into functional, ship-ready software.</p>
+  <p class="hero-sub"><strong>Math-driven engineer dedicated to building scalable digital infrastructure.</strong> I transform complex logical frameworks into actionable AI tooling and automated systems, specializing in RAG architectures and reliable backend pipelines that translate first-principles analysis into functional, ship-ready software.</p>
   <div class="cta-row">
     <a href="#projects" class="btn1"><strong>View Work</strong></a>
     <a href="#resume" class="btn2"><strong>View Resume</strong></a>
@@ -531,7 +554,7 @@ footer{text-align:center;padding:22px;font-size:.72rem;color:var(--slate4);lette
     <div class="resume-section">
       <div class="resume-section-title">Education</div>
       <div class="edu-grid">
-        <div class="edu-card"><div class="edu-degree">BS Mathematics</div><div class="edu-inst">Bahauddin Zakariya University</div><div class="edu-detail">CGPA: 3.67 · 2023–2026</div></div>
+        <div class="edu-card"><div class="edu-degree">BS Mathematics</div><div class="edu-inst">Bahauddin Zakariya University</div><div class="edu-detail">CGPA: 3.69 · 2023–2026</div></div>
         <div class="edu-card"><div class="edu-degree">Pre-Engineering</div><div class="edu-inst">KIPS College, Multan</div><div class="edu-detail">Grade A</div></div>
         <div class="edu-card"><div class="edu-degree">Matric (Science)</div><div class="edu-inst">GGHS Ayyazabad Maral</div><div class="edu-detail">Grade A+</div></div>
       </div>
