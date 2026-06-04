@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rebiya Ismail — Backend & AI Engineer</title>
+<title>Rebiya Ismail</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -117,7 +117,7 @@ nav{
 @keyframes fl3{0%,100%{transform:translate(0,0)}30%{transform:translate(-9px,7px)}65%{transform:translate(11px,-5px)}}
 .hero-formula{font-family:var(--mono);font-size:clamp(.76rem,1.8vw,.9rem);color:var(--blue);letter-spacing:.04em;margin-bottom:16px;opacity:.75;animation:fu .8s .2s ease both}
 .hero-formula span{color:var(--violet)}
-.hero-sub{font-size:clamp(.92rem,2vw,1.06rem);color:var(--slate2);font-weight:400;max-width:540px;line-height:1.88;margin-bottom:44px;animation:fu .8s .35s ease both}
+.hero-sub{font-size:clamp(.92rem,2vw,1.06rem);color:var(--slate2);font-weight:400;max-width:540px;line-height:1.88;margin-bottom:44px;animation:fu .8s .35s ease both; margin-left:auto; margin-right:auto;}
 .hero-sub strong{color:var(--dark)}
 .cta-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;animation:fu .8s .5s ease both}
 .btn1{font-size:.85rem;font-weight:700;letter-spacing:.04em;padding:13px 30px;border-radius:10px;background:var(--blue);color:#fff;border:none;text-decoration:none;transition:all .25s;box-shadow:0 4px 20px rgba(37,99,235,.3)}
@@ -187,8 +187,8 @@ nav{
 .omni-card:hover .ptag{background:rgba(217,119,6,.13)}
 
 /* ORBITAL STACK (PROFESSIONAL ENGINE LABELS) */
-.stack-section{text-align:center}
-.orbital-wrap{position:relative;width:560px;height:560px;margin:0 auto}
+.stack-section{text-align:center; overflow:hidden;}
+.orbital-wrap{position:relative;width:560px;height:560px;margin:0 auto; transition: transform 0.3s ease;}
 .orbital-core{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:86px;height:86px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2px;z-index:10;box-shadow:0 0 30px rgba(37,99,235,.35)}
 .orbital-core span:first-child{font-family:'Outfit',sans-serif;font-weight:800;font-size:1rem;color:#fff}
 .orbital-core span:last-child{font-size:.48rem;font-weight:700;color:rgba(255,255,255,.7);letter-spacing:.1em;text-transform:uppercase;font-family:var(--mono)}
@@ -307,25 +307,54 @@ footer{text-align:center;padding:22px;font-size:.72rem;color:var(--slate4);lette
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 
+/* ══════════════════════════════════
+   ENHANCED RESPONSIVE MEDIA QUERIES
+══════════════════════════════════ */
+@media(max-width:1024px){
+  .wrap{padding:80px 40px}
+  .bento{grid-template-columns:repeat(2,1fr)}
+  .bc1{grid-column:1 / 3}
+  .bc2{grid-column:1 / 2}
+  .bc3{grid-column:2 / 3}
+  .orbital-wrap{transform:scale(0.85); transform-origin:center; margin-bottom:-40px;}
+}
+
 @media(max-width:768px){
-  nav{padding:13px 18px}
-  .nav-links{gap:14px}
-  .wrap{padding:56px 18px}
-  .about-grid,.skill-cats,.edu-grid{grid-template-columns:1fr;gap:28px}
+  nav{padding:12px 20px; flex-direction:column; gap:12px;}
+  .nav-links{gap:12px; flex-wrap:wrap; justify-content:center;}
+  .wrap{padding:60px 24px}
+  .about-grid,.skill-cats,.edu-grid{grid-template-columns:1fr;gap:24px}
   .bento{grid-template-columns:1fr}
-  .bc1,.bc2,.bc3{grid-column:1/-1;grid-row:auto}
-  .bc1{display:flex;flex-direction:column;padding:28px 22px;gap:24px}
+  .bc1,.bc2,.bc3{grid-column:1 / -1;grid-row:auto}
+  .bc1{display:flex;flex-direction:column;padding:28px 22px;gap:20px}
   .agrid{grid-template-columns:1fr}
   .cbox{padding:36px 20px}
   .clink{min-width:0;width:100%}
-  .gh-box{flex-direction:column;padding:26px 20px;gap:20px}
-  .resume-header{flex-direction:column;gap:16px}
-  .resume-contact{text-align:left}
-  #omni-widget{width:calc(100vw - 24px);right:12px;bottom:88px}
+  .gh-box{flex-direction:column;padding:26px 20px;gap:20px;text-align:center;}
+  .resume-header{flex-direction:column;gap:16px;text-align:center;align-items:center;}
+  .resume-contact{text-align:center;}
+  #omni-widget{width:calc(100vw - 32px);right:16px;bottom:90px;}
+  .orbital-wrap{transform:scale(0.65); transform-origin:top center; margin-bottom:-190px;}
 }
+
 @media(max-width:480px){
-  .nav-links li:not(:last-child):not(:nth-last-child(2)){display:none}
-  .orbital-wrap{transform:scale(0.57);transform-origin:top center;margin-bottom:-165px}
+  .hero-name{font-size:3.2rem;}
+  .hero-sub{font-size:0.9rem; padding:0 10px;}
+  .cta-row{flex-direction:column; width:100%; padding:0 20px;}
+  .btn1, .btn2{width:100%; text-align:center;}
+  .nav-links{
+    display:flex; 
+    overflow-x:auto; 
+    padding-bottom:5px; 
+    justify-content:flex-start; 
+    -webkit-overflow-scrolling:touch; 
+    width:100%; 
+    white-space:nowrap;
+  }
+  .nav-links::-webkit-scrollbar{display:none;}
+  .nav-links li{display:inline-block;}
+  .nav-links li:not(:last-child):not(:nth-last-child(2)){display:inline-block;}
+  .orbital-wrap{transform:scale(0.48); transform-origin:top center; margin-bottom:-280px;}
 }
 </style>
 </head>
@@ -470,7 +499,7 @@ footer{text-align:center;padding:22px;font-size:.72rem;color:var(--slate4);lette
 </div>
 
 <div class="wrap reveal" id="resume">
-  <div class="slabel">Résumé</div>
+  <div class="slabel">Resume</div>
   <h2 class="shead">Full Background.</h2>
   <div class="resume-wrap">
     <div class="resume-header">
