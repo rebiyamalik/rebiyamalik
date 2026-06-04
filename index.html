@@ -38,13 +38,13 @@ html{scroll-behavior:smooth}
 body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--slate);overflow-x:hidden;cursor:none;font-size:16px;line-height:1.7}
 
 /* ══════════════════════════════════
-    BACKGROUND — 3 animated layers
+   BACKGROUND — 3 animated layers
 ══════════════════════════════════ */
 #aurora-canvas{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.55}
 
 .bg-hex{
   position:fixed;inset:0;z-index:0;pointer-events:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpath d='M28 66L0 50V18L28 2l28 16v32L28 66zm0 0v34M0 50l28 16M56 50L28 66M28 2L0 18M28 2l28 16' stroke='rgba(37%2C99%2C235,0.07)' fill='none' stroke-width='1'/%3E%3C/svg%3E");
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpath d='M28 66L0 50V18L28 2l28 16v32L28 66zm0 0v34M0 50l28 16M56 50L28 66M28 2L0 18M28 2l28 16' stroke='rgba(37%2C99%2C235%2C0.07)' fill='none' stroke-width='1'/%3E%3C/svg%3E");
   background-size:56px 100px;
   animation:hexShift 40s linear infinite;
 }
@@ -71,7 +71,7 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--slate);ove
 }
 
 /* ══════════════════════════════════
-    CURSOR
+   CURSOR MECHANICS
 ══════════════════════════════════ */
 #cd{position:fixed;width:8px;height:8px;background:var(--blue);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);box-shadow:0 0 10px rgba(37,99,235,.5)}
 #cr{position:fixed;width:32px;height:32px;border:1.5px solid rgba(37,99,235,0.4);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .2s,height .2s,border-color .2s}
@@ -79,7 +79,7 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--slate);ove
 @keyframes fpBloom{0%{transform:translate(-50%,-50%) scale(0) rotate(0deg);opacity:1}35%{transform:translate(-50%,-62%) scale(1.3) rotate(22deg);opacity:.9}70%{transform:translate(-50%,-70%) scale(.95) rotate(40deg);opacity:.5}100%{transform:translate(-50%,-82%) scale(.5) rotate(58deg);opacity:0}}
 
 /* ══════════════════════════════════
-    NAV
+   NAV
 ══════════════════════════════════ */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:200;
@@ -100,7 +100,7 @@ nav{
 .nav-pill::after{display:none !important}
 
 /* ══════════════════════════════════
-    HERO
+   HERO
 ══════════════════════════════════ */
 #hero{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 24px 100px}
 .hero-tag{display:inline-flex;align-items:center;gap:10px;font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);border:1px solid rgba(37,99,235,0.2);padding:7px 22px;border-radius:100px;background:rgba(37,99,235,0.06);margin-bottom:36px;animation:fu .8s ease both}
@@ -117,8 +117,8 @@ nav{
 @keyframes fl3{0%,100%{transform:translate(0,0)}30%{transform:translate(-9px,7px)}65%{transform:translate(11px,-5px)}}
 .hero-formula{font-family:var(--mono);font-size:clamp(.76rem,1.8vw,.9rem);color:var(--blue);letter-spacing:.04em;margin-bottom:16px;opacity:.75;animation:fu .8s .2s ease both}
 .hero-formula span{color:var(--violet)}
-.hero-sub{font-size:clamp(.92rem,2vw,1.15rem);color:var(--slate2);font-weight:400;max-width:540px;line-height:1.88;margin-bottom:44px;animation:fu .8s .35s ease both}
-.hero-sub strong{color:var(--dark); font-size: 1.2rem;}
+.hero-sub{font-size:clamp(.92rem,2vw,1.06rem);color:var(--slate2);font-weight:400;max-width:540px;line-height:1.88;margin-bottom:44px;animation:fu .8s .35s ease both}
+.hero-sub strong{color:var(--dark)}
 .cta-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;animation:fu .8s .5s ease both}
 .btn1{font-size:.85rem;font-weight:700;letter-spacing:.04em;padding:13px 30px;border-radius:10px;background:var(--blue);color:#fff;border:none;text-decoration:none;transition:all .25s;box-shadow:0 4px 20px rgba(37,99,235,.3)}
 .btn1:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(37,99,235,.45);background:#1d4ed8}
@@ -130,7 +130,7 @@ nav{
 @keyframes fu{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
 
 /* ══════════════════════════════════
-    SECTIONS
+   SECTIONS & TYPOGRAPHIC WEIGHTS
 ══════════════════════════════════ */
 .wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:88px 56px}
 .slabel{display:inline-flex;align-items:center;gap:10px;font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
@@ -138,25 +138,25 @@ nav{
 .shead{font-family:'Outfit',sans-serif;font-weight:700;font-size:clamp(1.85rem,4vw,2.6rem);color:var(--dark);line-height:1.1;margin-bottom:44px}
 .mono{font-family:var(--mono);font-size:.88em;color:var(--blue)}
 
-/* ══════════════════════════════════
-    ABOUT
-══════════════════════════════════ */
+.pdesc, .about-text p, .resume-summary, .exp-bullets li, .terminal-block p {
+  color: var(--slate2) !important;
+  font-weight: 500;
+}
+
+/* ABOUT */
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
-.about-text p{font-size:.975rem;line-height:1.88;color:var(--slate2);margin-bottom:18px}
 .about-text strong{color:var(--dark)}
 .acard{background:var(--card);border:1px solid rgba(37,99,235,0.1);border-radius:18px;padding:26px;position:relative;overflow:hidden;box-shadow:0 4px 24px rgba(37,99,235,.07)}
 .acard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--violet),transparent)}
 .sgrid{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-bottom:20px}
 .sbox{background:var(--bg2);border:1px solid rgba(37,99,235,0.1);border-radius:11px;padding:16px;text-align:center;transition:border-color .3s,box-shadow .3s}
-.sbox:hover{border-color:rgba(37,99,235,0.3);box-shadow:0 4px 16px rgba(37,99,235,.1)}
+.sbox:hover {border-color:rgba(37,99,235,0.3);box-shadow:0 4px 16px rgba(37,99,235,.1)}
 .snum{font-family:'Outfit',sans-serif;font-weight:800;font-size:1.65rem;color:var(--blue);display:block;line-height:1}
 .slbl{font-size:.62rem;color:var(--slate3);letter-spacing:.08em;text-transform:uppercase;margin-top:4px;display:block;font-weight:700}
 .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}
 .chip{font-size:.7rem;font-weight:600;padding:4px 12px;border-radius:100px;background:var(--blue-pale);color:var(--blue);border:1px solid rgba(37,99,235,0.18)}
 
-/* ══════════════════════════════════
-    PROJECTS
-══════════════════════════════════ */
+/* PROJECTS */
 .bento{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
 .bc{background:var(--card);border:1px solid rgba(37,99,235,0.1);border-radius:20px;padding:32px 28px;position:relative;overflow:hidden;transition:border-color .3s,transform .3s,box-shadow .3s;box-shadow:0 2px 16px rgba(15,23,42,0.06)}
 .bc:hover{border-color:rgba(37,99,235,0.28);transform:translateY(-5px);box-shadow:0 16px 48px rgba(37,99,235,.12)}
@@ -170,16 +170,23 @@ nav{
 .bc:hover .picon{background:rgba(37,99,235,.15)}
 .picon-math{font-family:'Outfit',sans-serif;font-weight:800;font-size:1.45rem;color:var(--blue)}
 .ptitle{font-family:'Outfit',sans-serif;font-weight:700;font-size:1rem;color:var(--dark);line-height:1.25;margin-bottom:10px}
-.pdesc{font-size:.86rem;line-height:1.82;color:var(--slate2);margin-bottom:20px}
 .ptags{display:flex;flex-wrap:wrap;gap:6px}
 .ptag{font-size:.62rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;border-radius:6px;background:var(--blue-pale);color:var(--blue);border:1px solid rgba(37,99,235,.15);transition:all .2s}
 .bc:hover .ptag{background:rgba(37,99,235,.14)}
 .plive{display:inline-flex;align-items:center;gap:7px;font-size:.78rem;font-weight:700;padding:9px 20px;border-radius:9px;text-decoration:none;transition:all .25s;margin-top:18px;color:var(--green);background:rgba(22,163,74,.08);border:1px solid rgba(22,163,74,.2)}
 .plive:hover{background:rgba(22,163,74,.15);border-color:rgba(22,163,74,.4);transform:translateY(-2px)}
+.math-card .picon{background:rgba(124,58,237,0.08);border-color:rgba(124,58,237,0.2)}
+.math-card .ptag{color:var(--violet);background:rgba(124,58,237,0.07);border-color:rgba(124,58,237,.15)}
+.math-card:hover .ptag{background:rgba(124,58,237,.13)}
+.math-feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.mf-item{background:var(--bg2);border:1px solid rgba(37,99,235,0.1);border-radius:10px;padding:13px 14px}
+.mf-item h5{font-family:var(--mono);font-size:.68rem;color:var(--violet);font-weight:600;letter-spacing:.06em;margin-bottom:4px;text-transform:uppercase}
+.mf-item p{font-size:.74rem;color:var(--slate3);line-height:1.5}
+.omni-card .picon{background:rgba(245,158,11,0.08);border-color:rgba(245,158,11,.2)}
+.omni-card .ptag{color:var(--amber);background:rgba(217,119,6,0.07);border-color:rgba(217,119,6,.15)}
+.omni-card:hover .ptag{background:rgba(217,119,6,.13)}
 
-/* ══════════════════════════════════
-    ORBITAL STACK
-══════════════════════════════════ */
+/* ORBITAL STACK (PROFESSIONAL ENGINE LABELS) */
 .stack-section{text-align:center}
 .orbital-wrap{position:relative;width:560px;height:560px;margin:0 auto}
 .orbital-core{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:86px;height:86px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2px;z-index:10;box-shadow:0 0 30px rgba(37,99,235,.35)}
@@ -215,7 +222,7 @@ nav{
 .gh-link{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;font-weight:700;padding:9px 20px;border-radius:9px;background:var(--blue);color:#fff;text-decoration:none;transition:all .25s;box-shadow:0 3px 14px rgba(37,99,235,.3)}
 .gh-link:hover{background:#1d4ed8;transform:translateY(-2px);box-shadow:0 6px 22px rgba(37,99,235,.4)}
 
-/* RESUME MATRIX */
+/* RESUME MATRIX SYNC SHEET */
 .resume-wrap{max-width:860px;margin:0 auto}
 .resume-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:36px;padding-bottom:24px;border-bottom:2px solid rgba(37,99,235,0.12)}
 .resume-name{font-family:'Outfit',sans-serif;font-weight:800;font-size:2rem;color:var(--dark);line-height:1}
@@ -224,6 +231,8 @@ nav{
 .resume-contact a{color:var(--blue);text-decoration:none}
 .resume-section{margin-bottom:32px}
 .resume-section-title{font-family:var(--mono);font-size:.67rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:14px;padding-bottom:6px;border-bottom:1px solid rgba(37,99,235,0.12)}
+.resume-summary{font-size:.9rem;line-height:1.85;color:var(--slate2)}
+.resume-summary strong{color:var(--dark)}
 .exp-block{margin-bottom:16px;padding:18px 20px;background:var(--card);border:1px solid rgba(37,99,235,0.1);border-radius:12px;transition:border-color .3s,box-shadow .3s;box-shadow:0 1px 8px rgba(37,99,235,.05)}
 .exp-block:hover{border-color:rgba(37,99,235,0.25);box-shadow:0 4px 20px rgba(37,99,235,.1)}
 .exp-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px}
@@ -248,14 +257,14 @@ nav{
 /* ACHIEVEMENTS */
 .agrid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
 .ai{display:flex;align-items:flex-start;gap:12px;background:var(--card);border:1px solid rgba(37,99,235,0.1);border-radius:13px;padding:16px 18px;transition:all .25s;box-shadow:0 1px 8px rgba(37,99,235,.05)}
-.ai:hover{border-color:rgba(37,99,235,0.28);transform:translateX(4px);box-shadow:0 4px 18px rgba(37,99,235,.1)}
+.ai:hover {border-color:rgba(37,99,235,0.28);transform:translateX(4px);box-shadow:0 4px 18px rgba(37,99,235,.1)}
 .adot{width:6px;min-width:6px;height:6px;background:var(--blue);border-radius:50%;margin-top:8px}
 .ai p{font-size:.855rem;color:var(--slate2);line-height:1.6}
 .ai strong{color:var(--dark)}
 .ach-link{color:var(--blue);text-decoration:none;border-bottom:1px dashed rgba(37,99,235,.35);transition:border-color .2s}
 .ach-link:hover{border-color:var(--blue)}
 
-/* CONTACT */
+/* CONTACT ZONE */
 .cbox{max-width:540px;margin:0 auto;background:var(--card);border:1px solid rgba(37,99,235,0.14);border-radius:22px;padding:52px 42px;position:relative;overflow:hidden;text-align:center;box-shadow:0 8px 40px rgba(37,99,235,.1)}
 .cbox::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--blue),transparent)}
 .cemoji{font-size:2.5rem;margin-bottom:14px;display:block}
@@ -264,6 +273,35 @@ nav{
 .clinks{display:flex;flex-direction:column;gap:9px;align-items:center}
 .clink{display:flex;align-items:center;gap:11px;font-size:.84rem;font-weight:600;color:var(--slate2);text-decoration:none;padding:11px 24px;border-radius:9px;border:1px solid rgba(37,99,235,0.12);background:var(--bg2);transition:all .25s;min-width:280px;justify-content:center}
 .clink:hover{border-color:rgba(37,99,235,0.3);background:var(--blue-pale);color:var(--blue);transform:scale(1.02)}
+
+/* OMNI CHAT WIDGET SYSTEM */
+#omni-toggle{position:fixed;bottom:28px;right:28px;z-index:500;width:56px;height:56px;border-radius:50%;background:var(--blue);border:none;cursor:none;font-size:1.4rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(37,99,235,.4);transition:all .25s}
+#omni-toggle:hover{transform:scale(1.1);box-shadow:0 6px 36px rgba(37,99,235,.6)}
+#omni-widget{position:fixed;bottom:96px;right:28px;z-index:500;width:360px;max-height:520px;background:var(--card);border:1px solid rgba(37,99,235,0.18);border-radius:18px;display:none;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(37,99,235,.15);animation:widgetIn .3s ease}
+@keyframes widgetIn{from{opacity:0;transform:translateY(12px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+#omni-widget.open{display:flex}
+.omni-header{padding:14px 16px;background:var(--blue);border-bottom:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;gap:12px}
+.omni-avatar{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.omni-title h4{font-family:'Outfit',sans-serif;font-weight:700;font-size:.85rem;color:#fff}
+.omni-title p{font-size:.65rem;color:rgba(255,255,255,.75);font-weight:600;letter-spacing:.04em}
+.omni-close{margin-left:auto;background:none;border:none;color:rgba(255,255,255,.7);font-size:.9rem;cursor:none;transition:color .2s;padding:4px 6px;border-radius:6px}
+.omni-close:hover{color:#fff;background:rgba(255,255,255,.15)}
+.omni-msgs{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;scrollbar-width:thin;scrollbar-color:var(--slate5) transparent}
+.msg{max-width:88%;padding:10px 13px;border-radius:12px;font-size:.82rem;line-height:1.65}
+.msg-bot{background:var(--bg2);border:1px solid rgba(37,99,235,0.1);color:var(--slate);align-self:flex-start;border-bottom-left-radius:4px}
+.msg-user{background:var(--blue);color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+.msg-typing{display:flex;gap:5px;align-items:center;padding:10px 14px}
+.typing-dot{width:6px;height:6px;border-radius:50%;background:var(--slate4);animation:typingPulse 1.4s ease-in-out infinite}
+.typing-dot:nth-child(2){animation-delay:.2s}
+.typing-dot:nth-child(3){animation-delay:.4s}
+@keyframes typingPulse{0%,80%,100%{transform:scale(.8);opacity:.5}40%{transform:scale(1);opacity:1}}
+.omni-input-row{padding:10px 12px;border-top:1px solid rgba(37,99,235,0.1);display:flex;gap:8px;align-items:flex-end}
+.omni-input{flex:1;background:var(--bg2);border:1px solid rgba(37,99,235,0.14);border-radius:9px;padding:9px 12px;color:var(--slate);font-size:.82rem;font-family:'Nunito',sans-serif;resize:none;outline:none;transition:border-color .2s;line-height:1.5;max-height:100px}
+.omni-input:focus{border-color:rgba(37,99,235,0.4)}
+.omni-send{width:34px;height:34px;border-radius:8px;background:var(--blue);border:none;color:#fff;font-size:.85rem;cursor:none;display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0}
+.omni-send:hover{background:#1d4ed8;transform:scale(1.06)}
+.omni-footer{padding:7px 14px;background:var(--bg3);border-top:1px solid rgba(37,99,235,0.08);text-align:center}
+.omni-footer span{font-family:var(--mono);font-size:.58rem;color:var(--slate4);letter-spacing:.06em}
 
 footer{text-align:center;padding:22px;font-size:.72rem;color:var(--slate4);letter-spacing:.08em;border-top:1px solid rgba(37,99,235,0.1);position:relative;z-index:1}
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
@@ -283,6 +321,7 @@ footer{text-align:center;padding:22px;font-size:.72rem;color:var(--slate4);lette
   .gh-box{flex-direction:column;padding:26px 20px;gap:20px}
   .resume-header{flex-direction:column;gap:16px}
   .resume-contact{text-align:left}
+  #omni-widget{width:calc(100vw - 24px);right:12px;bottom:88px}
 }
 @media(max-width:480px){
   .nav-links li:not(:last-child):not(:nth-last-child(2)){display:none}
@@ -312,7 +351,7 @@ footer{text-align:center;padding:22px;font-size:.72rem;color:var(--slate4);lette
     <li><a href="#projects">Work</a></li>
     <li><a href="#stack">Stack</a></li>
     <li><a href="#resume">Resume</a></li>
-    <li><a href="https://github.com/rebiyamalik" target="_blank" rel="noopener" class="nav-pill">⌥ GitHub ↗</a></li>
+    <li><a href="https://github.com/rebiyamalik" target="_blank" rel="noopener" class="nav-pill">⌥GitHub ↗</a></li>
     <li><a href="https://www.linkedin.com/in/rebiya-ismail-b3b5252ba/" target="_blank" rel="noopener" class="nav-pill">LinkedIn ↗</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -325,8 +364,8 @@ footer{text-align:center;padding:22px;font-size:.72rem;color:var(--slate4);lette
     <div class="hero-g1">REBIYA<br>ISMAIL</div>
     <h1 class="hero-name" data-text="REBIYA ISMAIL">REBIYA<br>ISMAIL</h1>
   </div>
-  <p class="hero-formula"> Computational Mathematics → AI Architecture → Clean Web Systems</p>
-  <p class="hero-sub"><strong>Fresher engineer.</strong> Applying rigorous analytical logic from a Mathematics degree to build custom backend infrastructure, context-aware AI tooling, and automated data workflows — from first principles.</p>
+  <p class="hero-formula">Computational Mathematics → AI Architecture → Clean Web Systems</p>
+  <p class="hero-sub"><strong>Math-driven engineer dedicated to building scalable digital infrastructure. I transform complex logical frameworks into actionable AI tooling and automated systems, specializing in RAG architectures and reliable backend pipelines that translate first-principles analysis into functional, ship-ready software.</p>
   <div class="cta-row">
     <a href="#projects" class="btn1"><strong>View Work</strong></a>
     <a href="#resume" class="btn2"><strong>View Resume</strong></a>
@@ -337,7 +376,7 @@ footer{text-align:center;padding:22px;font-size:.72rem;color:var(--slate4);lette
 <div class="wrap reveal" id="about">
   <div class="about-grid">
     <div class="about-text">
-      <div class="slabel"><strong>About Me</strong></div>
+      <div class="slabel">About Me</div>
       <h2 class="shead">Math-driven.<br>Systems-minded.</h2>
       <p>I'm a <strong>BS Mathematics student at Bahauddin Zakariya University</strong> (CASPAM Department), where coursework in <span class="mono">Linear Algebra</span>, <span class="mono">Real Analysis</span>, and <span class="mono">Differential Equations</span> trained me to decompose complexity before writing a single line of code.</p>
       <p>That foundation directly shapes how I build — from parsing structured data inputs with precision, to engineering <strong>context-aware AI applications</strong> that handle ambiguous, real-world queries cleanly.</p>
@@ -362,12 +401,12 @@ footer{text-align:center;padding:22px;font-size:.72rem;color:var(--slate4);lette
 </div>
 
 <div class="wrap reveal" id="projects">
-  <div class="slabel"><strong>Featured Work</strong></div>
+  <div class="slabel">Featured Work</div>
   <h2 class="shead">Things I've built<br>that actually ship.</h2>
   <div class="bento">
     <div class="bc bc1">
       <div>
-        <div class="pnum"><strong>Project 01</strong></div>
+        <div class="pnum">Project 01</div>
         <div class="picon">🌐</div>
         <h3 class="ptitle">CODE MEET 2025 — Event Platform</h3>
         <div class="ptags" style="margin-bottom:0">
@@ -392,7 +431,7 @@ footer{text-align:center;padding:22px;font-size:.72rem;color:var(--slate4);lette
       <a href="https://github.com/rebiyamalik/Math-Chatbot" target="_blank" rel="noopener" class="plive">View Project ↗</a>
     </div>
     <div class="bc bc3 omni-card">
-      <div class="pnum"><strong>Project 03 — Portfolio AI Widget</strong></div>
+      <div class="pnum">Project 03 — Portfolio AI Widget</div>
       <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px">
         <div class="picon" style="margin-bottom:0">🤖</div>
         <h3 class="ptitle" style="margin-bottom:0">Omni-Agent</h3>
@@ -417,8 +456,21 @@ footer{text-align:center;padding:22px;font-size:.72rem;color:var(--slate4);lette
   </div>
 </div>
 
+<div class="wrap reveal">
+  <div class="slabel">Open Source</div>
+  <h2 class="shead" style="margin-bottom:28px">Code on GitHub.</h2>
+  <div class="gh-box">
+    <div class="gh-icon-wrap">⌥</div>
+    <div class="gh-text">
+      <h3>github.com/rebiyamalik</h3>
+      <p>All projects, experiments, and open-source work — from automation scripts to full web platforms. The complete engineering picture.</p>
+      <a href="https://github.com/rebiyamalik" target="_blank" rel="noopener" class="gh-link">View GitHub Profile ↗</a>
+    </div>
+  </div>
+</div>
+
 <div class="wrap reveal" id="resume">
-  <div class="slabel"><strong>Resume</strong></div>
+  <div class="slabel">Résumé</div>
   <h2 class="shead">Full Background.</h2>
   <div class="resume-wrap">
     <div class="resume-header">
@@ -450,13 +502,46 @@ footer{text-align:center;padding:22px;font-size:.72rem;color:var(--slate4);lette
           <li>Created interactive dashboards, Excel worksheets, and revenue reports for data analysis and business insights.</li>
         </ul>
       </div>
+      <div class="exp-block">
+        <div class="exp-top"><span class="exp-role">Graphic Designer & Editor</span><span class="exp-period">2024 – 2026</span></div>
+        <div class="exp-org">Independent</div>
+        <ul class="exp-bullets">
+          <li>Designed resumes, logos, posters, and professional presentations to improve client branding and engagement.</li>
+        </ul>
+      </div>
+      <div class="exp-block">
+        <div class="exp-top"><span class="exp-role">Product Reseller</span><span class="exp-period">2021 – 2023</span></div>
+        <div class="exp-org">Oriflame</div>
+        <ul class="exp-bullets">
+          <li>Managed customer relationships, product promotions, and social media marketing campaigns.</li>
+        </ul>
+      </div>
     </div>
+
+    <div class="resume-section">
+      <div class="resume-section-title">Projects</div>
+      <div class="exp-block">
+        <div class="exp-top"><span class="exp-role">Math Chatbot Application</span><span class="exp-period">Python</span></div>
+        <ul class="exp-bullets">
+          <li>Developed an interactive chatbot capable of handling logical calculations and implemented structured workflows and prompt-based interaction systems.</li>
+        </ul>
+      </div>
+    </div>
+
     <div class="resume-section">
       <div class="resume-section-title">Education</div>
       <div class="edu-grid">
-        <div class="edu-card"><div class="edu-degree">BS Mathematics</div><div class="edu-inst">Bahauddin Zakariya University</div><div class="edu-detail">CGPA: 3.69 · 2023–2026</div></div>
+        <div class="edu-card"><div class="edu-degree">BS Mathematics</div><div class="edu-inst">Bahauddin Zakariya University</div><div class="edu-detail">CGPA: 3.67 · 2023–2026</div></div>
         <div class="edu-card"><div class="edu-degree">Pre-Engineering</div><div class="edu-inst">KIPS College, Multan</div><div class="edu-detail">Grade A</div></div>
         <div class="edu-card"><div class="edu-degree">Matric (Science)</div><div class="edu-inst">GGHS Ayyazabad Maral</div><div class="edu-detail">Grade A+</div></div>
+      </div>
+    </div>
+    <div class="resume-section" style="margin-bottom:0">
+      <div class="resume-section-title">Technical Skills</div>
+      <div class="skill-cats">
+        <div class="skill-cat"><div class="skill-cat-title">Core Development</div><div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">PHP</span><span class="skill-tag">JavaScript</span><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">SQL</span></div></div>
+        <div class="skill-cat"><div class="skill-cat-title">AI Engineering</div><div class="skill-tags"><span class="skill-tag">Agentic Ai</span><span class="skill-tag">RAG System</span><span class="skill-tag">Prompt Engineering</span></div></div>
+        <div class="skill-cat"><div class="skill-cat-title">Automation & Design</div><div class="skill-tags"><span class="skill-tag">API Integration</span><span class="skill-tag">Figma</span><span class="skill-tag">Canva</span><span class="skill-tag">Git & GitHub</span></div></div>
       </div>
     </div>
   </div>
@@ -470,15 +555,36 @@ footer{text-align:center;padding:22px;font-size:.72rem;color:var(--slate4);lette
     <div class="clinks">
       <a href="mailto:rebiyaismail86@gmail.com" class="clink">📧 rebiyaismail86@gmail.com</a>
       <a href="tel:+923120452699" class="clink">📱 +92 312 045 2699</a>
+      <a href="https://www.linkedin.com/in/rebiya-ismail-b3b5252ba/" target="_blank" rel="noopener" class="clink">💼 linkedin.com/in/rebiya-ismail</a>
+      <a href="https://github.com/rebiyamalik" target="_blank" rel="noopener" class="clink">⌥ github.com/rebiyamalik</a>
+      <a href="#" class="clink">📍 New Multan, Pakistan</a>
     </div>
   </div>
 </div>
 
-<footer>© 2026 Rebiya Ismail · BS Mathematics · BZU CASPAM ✦</footer>
+<footer>© 2025 Rebiya Ismail · BS Mathematics · BZU CASPAM ✦</footer>
+
+<button id="omni-toggle" title="Chat with Omni-Agent">🤖</button>
+<div id="omni-widget">
+  <div class="omni-header">
+    <div class="omni-avatar">🤖</div>
+    <div class="omni-title"><h4>Omni-Agent</h4><p>Rebiya's AI Portfolio Assistant</p></div>
+    <button class="omni-close" id="omni-close">✕</button>
+  </div>
+  <div class="omni-msgs" id="omni-msgs">
+    <div class="msg msg-bot">Hi! I'm <strong>Omni-Agent</strong> — Rebiya's embedded AI assistant.<br><br>Ask me about her <strong>skills</strong>, <strong>projects</strong>, <strong>contact</strong>, or anything technical. I also understand <strong>Urdu / اردو</strong> 🧠<br><br><small style="color:var(--slate3);font-family:var(--mono);font-size:.7rem">💡 Try: "Tell me about Rebiya" · "What projects?" · "Tech stack?"</small></div>
+  </div>
+  <div class="omni-input-row">
+    <textarea class="omni-input" id="omni-input" placeholder="Ask anything..." rows="1"></textarea>
+    <button class="omni-send" id="omni-send">➤</button>
+  </div>
+  <div class="omni-footer"><span>Powered by Claude · rebiyamalik.vercel.app</span></div>
+</div>
 
 <script>
 /* ══════════════════════════════════
-    AURORA BACKGROUND
+   AURORA BACKGROUND (new style 3)
+   Flowing gradient aurora effect
 ══════════════════════════════════ */
 (function(){
   const cv=document.getElementById('aurora-canvas');
@@ -519,20 +625,45 @@ footer{text-align:center;padding:22px;font-size:.72rem;color:var(--slate4);lette
 })();
 
 /* ══════════════════════════════════
-    CURSOR
+   PARTICLES
+══════════════════════════════════ */
+(function(){
+  const pf=document.getElementById('particles');
+  for(let i=0;i<28;i++){
+    const p=document.createElement('div');p.className='p-dot';
+    const sz=1+Math.random()*3;
+    const blue=Math.random()>.5;
+    p.style.cssText=`width:${sz}px;height:${sz}px;left:${Math.random()*100}%;bottom:0;background:${blue?'rgba(37,99,235,0.35)':'rgba(124,58,237,0.25)'};animation-duration:${12+Math.random()*22}s;animation-delay:${Math.random()*20}s;`;
+    pf.appendChild(p);
+  }
+})();
+
+/* ══════════════════════════════════
+   CURSOR
 ══════════════════════════════════ */
 const cd=document.getElementById('cd'),cr=document.getElementById('cr');
 let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cd.style.left=mx+'px';cd.style.top=my+'px';});
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cd.style.left=mx+'px';cd.style.top=my+'px';spawnFlower(mx,my)});
 (function animR(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;cr.style.left=rx+'px';cr.style.top=ry+'px';requestAnimationFrame(animR)})();
+document.querySelectorAll('a,button,textarea').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cr.style.width='46px';cr.style.height='46px';cr.style.borderColor='rgba(37,99,235,.7)';cd.style.opacity='0'});
+  el.addEventListener('mouseleave',()=>{cr.style.width='32px';cr.style.height='32px';cr.style.borderColor='rgba(37,99,235,.4)';cd.style.opacity='1'});
+});
 
 /* ══════════════════════════════════
-    ORBITAL STACK
+   FLOWER TRAIL
+══════════════════════════════════ */
+const flw=['🌸','🌺','🌼','🌷','✿','🌻','💮'];
+let lt=0;
+function spawnFlower(x,y){const n=Date.now();if(n-lt<75)return;lt=n;const e=document.createElement('div');e.className='fp';e.textContent=flw[Math.floor(Math.random()*flw.length)];e.style.cssText=`left:${x}px;top:${y}px;font-size:${11+Math.random()*13}px;animation-duration:${.65+Math.random()*.5}s`;document.body.appendChild(e);setTimeout(()=>e.remove(),1200)}
+
+/* ══════════════════════════════════
+   ORBITAL STACK
 ══════════════════════════════════ */
 const RINGS=[
-  {id:'ring1',r:95,tools:[{icon:'◈',label:'Python'},{icon:'⬢',label:'n8n'},{icon:'⚙',label:'AI/LLMs'}]},
-  {id:'ring2',r:165,tools:[{icon:'◈',label:'HTML'},{icon:'⬢',label:'CSS'},{icon:'⚙',label:'JS'},{icon:'◈',label:'PHP'},{icon:'⬢',label:'SQL'},{icon:'⚙',label:'APIs'}]},
-  {id:'ring3',r:240,tools:[{icon:'📊',label:'Figma'},{icon:'◈',label:'GitHub'},{icon:'⬢',label:'Vercel'},{icon:'⚙',label:'Automation'}]}
+  {id:'ring1',r:95,tools:[{icon:'🐍',label:'Python'},{icon:'⚙️',label:'n8n'},{icon:'🤖',label:'AI/LLMs'}]},
+  {id:'ring2',r:165,tools:[{icon:'🌐',label:'HTML'},{icon:'🎨',label:'CSS'},{icon:'📜',label:'JS'},{icon:'🐘',label:'PHP'},{icon:'🗄️',label:'SQL'},{icon:'🔗',label:'APIs'}]},
+  {id:'ring3',r:240,tools:[{icon:'🎯',label:'Figma'},{icon:'🐙',label:'GitHub'},{icon:'☁️',label:'Vercel'},{icon:'📊',label:'Canva'},{icon:'🔢',label:'NumPy'},{icon:'📐',label:'SymPy'},{icon:'📡',label:'Automation'}]}
 ];
 RINGS.forEach(ring=>{
   const el=document.getElementById(ring.id);
@@ -547,10 +678,85 @@ RINGS.forEach(ring=>{
 });
 
 /* ══════════════════════════════════
-    SCROLL REVEAL
+   SCROLL REVEAL
 ══════════════════════════════════ */
 const obs=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.08});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+/* ══════════════════════════════════
+   OMNI-AGENT WIDGET
+══════════════════════════════════ */
+const OMNI_SYSTEM=`You are the 'Omni-Agent,' the core interactive AI assistant embedded directly into Rebiya Ismail's engineering portfolio at rebiyamalik.vercel.app.
+
+ABOUT REBIYA:
+- BS Mathematics student at Bahauddin Zakariya University (CASPAM Department), CGPA 3.69
+- 3+ years building full-stack platforms, AI tooling, and automation systems
+- Projects: CODE MEET 2025 event platform (live), Math-Chatbot (academic computational engine), Omni-Agent (this widget)
+- Strong analytical, math-driven approach to backend infrastructure and AI problem-solving
+- General Secretary at ZDS-CASPAM, Speaker/Lead at CODE MEET 2025
+- Skills: Python, PHP, JS, HTML, CSS, SQL, n8n, LLM APIs, RAG, Whisper, SymPy, NumPy, Figma
+
+RULES:
+1. Detect user language (English/Urdu/other) and respond in that same language
+2. Keep responses concise, use bullet points for technical details
+3. Be warm, confident, technically precise
+4. Highlight her math-driven, analytical approach when describing her background`;
+
+const toggle=document.getElementById('omni-toggle');
+const widget=document.getElementById('omni-widget');
+const closeBtn=document.getElementById('omni-close');
+const msgs=document.getElementById('omni-msgs');
+const input=document.getElementById('omni-input');
+const sendBtn=document.getElementById('omni-send');
+let chatHistory=[];
+
+toggle.addEventListener('click',()=>widget.classList.toggle('open'));
+closeBtn.addEventListener('click',()=>widget.classList.remove('open'));
+input.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendMsg()}});
+input.addEventListener('input',()=>{input.style.height='auto';input.style.height=Math.min(input.scrollHeight,100)+'px'});
+sendBtn.addEventListener('click',sendMsg);
+
+function addMsg(text,role){const d=document.createElement('div');d.className=`msg msg-${role}`;d.innerHTML=text;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;return d}
+function addTyping(){const d=document.createElement('div');d.className='msg msg-bot msg-typing';d.id='typing-indicator';d.innerHTML='<div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>';msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight}
+function removeTyping(){const t=document.getElementById('typing-indicator');if(t)t.remove()}
+
+const DEMO={
+  about:"<strong>Rebiya Ismail</strong> is a BS Mathematics student at BZU CASPAM (CGPA 3.69) and a fresher full-stack developer with 3+ years of freelance engineering experience.<br><br>She specialises in:<br>• Backend infrastructure & API integration<br>• Context-aware AI tooling (RAG, LLM pipelines)<br>• Workflow automation with n8n<br>• Computational math applied to engineering problems",
+  projects:"Rebiya's live projects:<br><br>• <strong>CODE MEET 2025</strong> — Official event platform → <a href='https://code-meet-2025.vercel.app/' target='_blank' style='color:var(--blue)'>View Live ↗</a><br>• <strong>Math-Chatbot</strong> — Academic AI engine with LaTeX, PDF parsing & equation plotting<br>• <strong>Omni-Agent</strong> — This multilingual portfolio assistant",
+  skills:"Tech stack:<br><br><strong>Backend:</strong> Python, PHP, JavaScript, SQL<br><strong>AI/ML:</strong> LLM APIs, RAG, Whisper, SymPy, NumPy, Matplotlib<br><strong>Automation:</strong> n8n, API integration, PDF parsing<br><strong>UI/UX:</strong> HTML/CSS, Figma, Vercel, GitHub",
+  contact:"📧 rebiyaismail86@gmail.com<br>📱 +92 312 045 2699<br>🔗 <a href='https://linkedin.com/in/rebiya-ismail-b3b5252ba/' target='_blank' style='color:var(--blue)'>LinkedIn</a><br>⌥ <a href='https://github.com/rebiyamalik' target='_blank' style='color:var(--blue)'>GitHub</a>"
+};
+
+function demoReply(t){
+  const q=t.toLowerCase();
+  if(q.match(/about|who|rebiya|background|math|cgpa|university|bzu/))return DEMO.about;
+  if(q.match(/project|built|work|chatbot|code meet|omni|website/))return DEMO.projects;
+  if(q.match(/skill|stack|tech|python|language|tool|use/))return DEMO.skills;
+  if(q.match(/contact|email|linkedin|github|reach|hire/))return DEMO.contact;
+  if(q.match(/ارد|salam|السلام/i))return"السلام علیکم! 👋<br><br>میں <strong>Omni-Agent</strong> ہوں — Rebiya کا AI اسسٹنٹ۔ آپ اس کی skills، projects، یا background کے بارے میں پوچھ سکتے ہیں!";
+  return"I'm running in <strong>demo mode</strong>.<br><br>Ask me about:<br>• Rebiya's background & CGPA<br>• Her projects<br>• Her tech stack<br>• Contact details";
+}
+
+let _apiOk=null;
+async function smartSend(text){
+  if(_apiOk===false)return demoReply(text);
+  try{
+    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:800,system:OMNI_SYSTEM,messages:chatHistory})});
+    if(!res.ok)throw new Error(`${res.status}`);
+    const data=await res.json();_apiOk=true;
+    return data.content?.map(b=>b.text||'').join('')||'Sorry, no response.';
+  }catch(e){_apiOk=false;return demoReply(text)}
+}
+
+async function sendMsg(){
+  const text=input.value.trim();if(!text)return;
+  addMsg(text,'user');chatHistory.push({role:'user',content:text});
+  input.value='';input.style.height='auto';addTyping();
+  const reply=await smartSend(text);removeTyping();
+  addMsg(reply.replace(/\n\n/g,'<br><br>').replace(/\n/g,'<br>').replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>'),'bot');
+  chatHistory.push({role:'assistant',content:reply});
+  if(chatHistory.length>20)chatHistory=chatHistory.slice(-18);
+}
 </script>
 </body>
 </html>
